@@ -1,0 +1,890 @@
+[32m[I 2022-07-18 18:54:32,044][0m A new study created in memory with name: hyper-parameter-search[0m
+Using custom data configuration default-a1a1013d5c9373f1
+Reusing dataset csv (/mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 83.99it/s]
+Parameter 'function'=<function Pruebas.preprocess_text at 0x7f47504a2280> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+
+  0%|          | 0/17 [00:00<?, ?ba/s]
+  6%|▌         | 1/17 [00:00<00:08,  2.00ba/s]
+ 12%|█▏        | 2/17 [00:00<00:06,  2.30ba/s]
+ 18%|█▊        | 3/17 [00:01<00:05,  2.41ba/s]
+ 24%|██▎       | 4/17 [00:01<00:05,  2.49ba/s]
+ 29%|██▉       | 5/17 [00:02<00:04,  2.52ba/s]
+ 35%|███▌      | 6/17 [00:02<00:04,  2.39ba/s]
+ 41%|████      | 7/17 [00:02<00:04,  2.44ba/s]
+ 47%|████▋     | 8/17 [00:03<00:03,  2.49ba/s]
+ 53%|█████▎    | 9/17 [00:03<00:03,  2.48ba/s]
+ 59%|█████▉    | 10/17 [00:04<00:02,  2.53ba/s]
+ 65%|██████▍   | 11/17 [00:04<00:02,  2.54ba/s]
+ 71%|███████   | 12/17 [00:04<00:01,  2.56ba/s]
+ 76%|███████▋  | 13/17 [00:05<00:01,  2.55ba/s]
+ 82%|████████▏ | 14/17 [00:05<00:01,  2.61ba/s]
+ 88%|████████▊ | 15/17 [00:05<00:00,  2.62ba/s]
+ 94%|█████████▍| 16/17 [00:06<00:00,  2.75ba/s]
+100%|██████████| 17/17 [00:06<00:00,  3.07ba/s]
+100%|██████████| 17/17 [00:06<00:00,  2.60ba/s]
+
+  0%|          | 0/14 [00:00<?, ?ba/s]
+  7%|▋         | 1/14 [00:00<00:04,  2.97ba/s]
+ 14%|█▍        | 2/14 [00:00<00:05,  2.36ba/s]
+ 21%|██▏       | 3/14 [00:01<00:04,  2.52ba/s]
+ 29%|██▊       | 4/14 [00:01<00:03,  2.55ba/s]
+ 36%|███▌      | 5/14 [00:01<00:03,  2.63ba/s]
+ 43%|████▎     | 6/14 [00:02<00:03,  2.59ba/s]
+ 50%|█████     | 7/14 [00:02<00:02,  2.62ba/s]
+ 57%|█████▋    | 8/14 [00:03<00:02,  2.64ba/s]
+ 64%|██████▍   | 9/14 [00:03<00:01,  2.66ba/s]
+ 71%|███████▏  | 10/14 [00:03<00:01,  2.64ba/s]
+ 79%|███████▊  | 11/14 [00:04<00:01,  2.64ba/s]
+ 86%|████████▌ | 12/14 [00:04<00:00,  2.61ba/s]
+ 93%|█████████▎| 13/14 [00:04<00:00,  2.62ba/s]
+100%|██████████| 14/14 [00:05<00:00,  2.94ba/s]
+100%|██████████| 14/14 [00:05<00:00,  2.68ba/s]
+
+  0%|          | 0/1 [00:00<?, ?ba/s]
+100%|██████████| 1/1 [00:00<00:00, 17.34ba/s]
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/0/checkpoint-2089
+Configuration saved in ./testBetoTwitter/0/checkpoint-2089/config.json
+Model weights saved in ./testBetoTwitter/0/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/0/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/0/checkpoint-2089/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/0/checkpoint-4178
+Configuration saved in ./testBetoTwitter/0/checkpoint-4178/config.json
+Model weights saved in ./testBetoTwitter/0/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/0/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/0/checkpoint-4178/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/0/checkpoint-6267
+Configuration saved in ./testBetoTwitter/0/checkpoint-6267/config.json
+Model weights saved in ./testBetoTwitter/0/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/0/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/0/checkpoint-6267/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/0/checkpoint-8356
+Configuration saved in ./testBetoTwitter/0/checkpoint-8356/config.json
+Model weights saved in ./testBetoTwitter/0/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/0/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/0/checkpoint-8356/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testBetoTwitter/0/checkpoint-2089 (score: 0.6606684923171997).
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+[32m[I 2022-07-18 19:35:14,701][0m Trial 0 finished with value: 0.23650124861670202 and parameters: {'learning_rate': 1.6721784128156267e-05, 'weight_decay': 0.000389800650527385, 'per_device_train_batch_size': 8}. Best is trial 0 with value: 0.23650124861670202.[0m
+loading configuration file ./model/config.json
+Model config BertConfig {
+  "_name_or_path": "./model/",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 31006
+}
+
+loading weights file ./model/pytorch_model.bin
+All model checkpoint weights were used when initializing BertForSequenceClassification.
+
+All the weights of BertForSequenceClassification were initialized from the model checkpoint at ./model/.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BertForSequenceClassification for predictions without further training.
+Using custom data configuration default-a1a1013d5c9373f1
+Reusing dataset csv (/mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+{'loss': 0.4783, 'learning_rate': 1.5921315763955394e-05, 'epoch': 0.24}
+{'loss': 0.4175, 'learning_rate': 1.5120847399754517e-05, 'epoch': 0.48}
+{'loss': 0.3752, 'learning_rate': 1.4320379035553642e-05, 'epoch': 0.72}
+{'loss': 0.36, 'learning_rate': 1.3519910671352769e-05, 'epoch': 0.96}
+{'eval_loss': 0.6606684923171997, 'eval_maf': 0.7537227027358606, 'eval_map': 0.9215893108298171, 'eval_mar': 0.6847301136363637, 'eval_mif': 0.83, 'eval_mip': 0.83, 'eval_mir': 0.83, 'eval_avgf': 0.81229327689854, 'eval_avgp': 0.8592686357243319, 'eval_avgr': 0.83, 'eval_mse': 0.53, 'eval_runtime': 1.1504, 'eval_samples_per_second': 86.927, 'eval_steps_per_second': 11.3, 'learning_rate': 1.3377427302525014e-05, 'epoch': 1.0}
+{'loss': 0.3007, 'learning_rate': 1.2719442307151896e-05, 'epoch': 1.2}
+{'loss': 0.3021, 'learning_rate': 1.1918973942951021e-05, 'epoch': 1.44}
+{'loss': 0.2896, 'learning_rate': 1.1118505578750146e-05, 'epoch': 1.68}
+{'loss': 0.2666, 'learning_rate': 1.0318037214549271e-05, 'epoch': 1.91}
+{'eval_loss': 0.6943206787109375, 'eval_maf': 0.6964212982387916, 'eval_map': 0.8844444444444444, 'eval_mar': 0.638778409090909, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8271059488113635, 'eval_avgp': 0.8521777777777777, 'eval_avgr': 0.84, 'eval_mse': 0.48, 'eval_runtime': 1.1418, 'eval_samples_per_second': 87.581, 'eval_steps_per_second': 11.385, 'learning_rate': 1.003307047689376e-05, 'epoch': 2.0}
+{'loss': 0.186, 'learning_rate': 9.517568850348396e-06, 'epoch': 2.15}
+{'loss': 0.1676, 'learning_rate': 8.717100486147523e-06, 'epoch': 2.39}
+{'loss': 0.1671, 'learning_rate': 7.916632121946648e-06, 'epoch': 2.63}
+{'loss': 0.1841, 'learning_rate': 7.116163757745774e-06, 'epoch': 2.87}
+{'eval_loss': 0.833739161491394, 'eval_maf': 0.6920721816707218, 'eval_map': 0.8720985540334856, 'eval_mar': 0.634872159090909, 'eval_mif': 0.83, 'eval_mip': 0.83, 'eval_mir': 0.83, 'eval_avgf': 0.8177047850770478, 'eval_avgp': 0.8334056316590563, 'eval_avgr': 0.83, 'eval_mse': 0.63, 'eval_runtime': 1.1494, 'eval_samples_per_second': 87.004, 'eval_steps_per_second': 11.311, 'learning_rate': 6.688713651262507e-06, 'epoch': 3.0}
+{'loss': 0.1306, 'learning_rate': 6.315695393544899e-06, 'epoch': 3.11}
+{'loss': 0.1058, 'learning_rate': 5.515227029344025e-06, 'epoch': 3.35}
+{'loss': 0.0708, 'learning_rate': 4.714758665143151e-06, 'epoch': 3.59}
+{'loss': 0.0883, 'learning_rate': 3.914290300942276e-06, 'epoch': 3.83}
+{'eval_loss': 1.2554748058319092, 'eval_maf': 0.6618089340999558, 'eval_map': 0.8647791353383459, 'eval_mar': 0.5946022727272727, 'eval_mif': 0.8000000000000002, 'eval_mip': 0.8, 'eval_mir': 0.8, 'eval_avgf': 0.78568597965502, 'eval_avgp': 0.8097274436090225, 'eval_avgr': 0.8, 'eval_mse': 0.56, 'eval_runtime': 1.1452, 'eval_samples_per_second': 87.324, 'eval_steps_per_second': 11.352, 'learning_rate': 3.3443568256312535e-06, 'epoch': 4.0}
+{'train_runtime': 2413.3719, 'train_samples_per_second': 34.62, 'train_steps_per_second': 4.328, 'train_loss': 0.23650124861670202, 'learning_rate': 3.3443568256312535e-06, 'epoch': 4.0}
+{'eval_loss': 0.6606684923171997, 'eval_maf': 0.7537227027358606, 'eval_map': 0.9215893108298171, 'eval_mar': 0.6847301136363637, 'eval_mif': 0.83, 'eval_mip': 0.83, 'eval_mir': 0.83, 'eval_avgf': 0.81229327689854, 'eval_avgp': 0.8592686357243319, 'eval_avgr': 0.83, 'eval_mse': 0.53, 'eval_runtime': 1.1554, 'eval_samples_per_second': 86.546, 'eval_steps_per_second': 11.251, 'learning_rate': 3.3443568256312535e-06, 'epoch': 4.0}
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 197.35it/s]
+loading file ./tokenizer/vocab.txt
+loading file ./tokenizer/tokenizer.json
+loading file ./tokenizer/added_tokens.json
+loading file ./tokenizer/special_tokens_map.json
+loading file ./tokenizer/tokenizer_config.json
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 16
+  Total train batch size (w. parallel, distributed & accumulation) = 16
+  Gradient Accumulation steps = 1
+  Total optimization steps = 5225
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testBetoTwitter/1/checkpoint-1045
+Configuration saved in ./testBetoTwitter/1/checkpoint-1045/config.json
+Model weights saved in ./testBetoTwitter/1/checkpoint-1045/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/1/checkpoint-1045/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/1/checkpoint-1045/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testBetoTwitter/1/checkpoint-2090
+Configuration saved in ./testBetoTwitter/1/checkpoint-2090/config.json
+Model weights saved in ./testBetoTwitter/1/checkpoint-2090/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/1/checkpoint-2090/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/1/checkpoint-2090/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testBetoTwitter/1/checkpoint-3135
+Configuration saved in ./testBetoTwitter/1/checkpoint-3135/config.json
+Model weights saved in ./testBetoTwitter/1/checkpoint-3135/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/1/checkpoint-3135/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/1/checkpoint-3135/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testBetoTwitter/1/checkpoint-4180
+Configuration saved in ./testBetoTwitter/1/checkpoint-4180/config.json
+Model weights saved in ./testBetoTwitter/1/checkpoint-4180/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/1/checkpoint-4180/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/1/checkpoint-4180/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testBetoTwitter/1/checkpoint-5225
+Configuration saved in ./testBetoTwitter/1/checkpoint-5225/config.json
+Model weights saved in ./testBetoTwitter/1/checkpoint-5225/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/1/checkpoint-5225/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/1/checkpoint-5225/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testBetoTwitter/1/checkpoint-5225 (score: 0.7449883222579956).
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[32m[I 2022-07-18 20:22:01,975][0m Trial 1 finished with value: 0.4652703302556818 and parameters: {'learning_rate': 7.253570980501129e-07, 'weight_decay': 0.0006298107060897773, 'per_device_train_batch_size': 16}. Best is trial 0 with value: 0.23650124861670202.[0m
+loading configuration file ./model/config.json
+Model config BertConfig {
+  "_name_or_path": "./model/",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 31006
+}
+
+loading weights file ./model/pytorch_model.bin
+All model checkpoint weights were used when initializing BertForSequenceClassification.
+
+All the weights of BertForSequenceClassification were initialized from the model checkpoint at ./model/.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BertForSequenceClassification for predictions without further training.
+Using custom data configuration default-a1a1013d5c9373f1
+Reusing dataset csv (/mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+{'loss': 0.8168, 'learning_rate': 6.559449355572791e-07, 'epoch': 0.48}
+{'loss': 0.5219, 'learning_rate': 5.865327730644453e-07, 'epoch': 0.96}
+{'eval_loss': 0.8692408204078674, 'eval_maf': 0.2943235572374645, 'eval_map': 0.2964190981432361, 'eval_mar': 0.3142755681818182, 'eval_mif': 0.69, 'eval_mip': 0.69, 'eval_mir': 0.69, 'eval_avgf': 0.6094683065279092, 'eval_avgp': 0.5649867374005305, 'eval_avgr': 0.69, 'eval_mse': 1.14, 'eval_runtime': 2.2914, 'eval_samples_per_second': 43.642, 'eval_steps_per_second': 3.055, 'learning_rate': 5.802856784400904e-07, 'epoch': 1.0}
+{'loss': 0.4781, 'learning_rate': 5.171206105716115e-07, 'epoch': 1.44}
+{'loss': 0.455, 'learning_rate': 4.4770844807877783e-07, 'epoch': 1.91}
+{'eval_loss': 0.8235704302787781, 'eval_maf': 0.30325342465753424, 'eval_map': 0.28929539295392953, 'eval_mar': 0.32563920454545453, 'eval_mif': 0.7, 'eval_mip': 0.7, 'eval_mir': 0.7, 'eval_avgf': 0.6293287671232877, 'eval_avgp': 0.5772628726287263, 'eval_avgr': 0.7, 'eval_mse': 1.42, 'eval_runtime': 1.1222, 'eval_samples_per_second': 89.109, 'eval_steps_per_second': 6.238, 'learning_rate': 4.352142588300677e-07, 'epoch': 2.0}
+{'loss': 0.4276, 'learning_rate': 3.78296285585944e-07, 'epoch': 2.39}
+{'loss': 0.4142, 'learning_rate': 3.088841230931103e-07, 'epoch': 2.87}
+{'eval_loss': 0.7797464728355408, 'eval_maf': 0.30325342465753424, 'eval_map': 0.28929539295392953, 'eval_mar': 0.32563920454545453, 'eval_mif': 0.7, 'eval_mip': 0.7, 'eval_mir': 0.7, 'eval_avgf': 0.6293287671232877, 'eval_avgp': 0.5772628726287263, 'eval_avgr': 0.7, 'eval_mse': 1.42, 'eval_runtime': 1.11, 'eval_samples_per_second': 90.087, 'eval_steps_per_second': 6.306, 'learning_rate': 2.901428392200452e-07, 'epoch': 3.0}
+{'loss': 0.4025, 'learning_rate': 2.394719606002765e-07, 'epoch': 3.35}
+{'loss': 0.3954, 'learning_rate': 1.7005979810744273e-07, 'epoch': 3.83}
+{'eval_loss': 0.7466711401939392, 'eval_maf': 0.46853760274812906, 'eval_map': 0.5368275316455696, 'eval_mar': 0.44446022727272727, 'eval_mif': 0.75, 'eval_mip': 0.75, 'eval_mir': 0.75, 'eval_avgf': 0.7125088946141577, 'eval_avgp': 0.7060284810126582, 'eval_avgr': 0.75, 'eval_mse': 0.99, 'eval_runtime': 1.1202, 'eval_samples_per_second': 89.269, 'eval_steps_per_second': 6.249, 'learning_rate': 1.450714196100226e-07, 'epoch': 4.0}
+{'loss': 0.4001, 'learning_rate': 1.0064763561460896e-07, 'epoch': 4.31}
+{'loss': 0.3792, 'learning_rate': 3.12354731217752e-08, 'epoch': 4.78}
+{'eval_loss': 0.7449883222579956, 'eval_maf': 0.4498913248913249, 'eval_map': 0.4962025316455696, 'eval_mar': 0.4330965909090909, 'eval_mif': 0.74, 'eval_mip': 0.74, 'eval_mir': 0.74, 'eval_avgf': 0.7001001701001701, 'eval_avgp': 0.6862784810126583, 'eval_avgr': 0.74, 'eval_mse': 1.08, 'eval_runtime': 1.1107, 'eval_samples_per_second': 90.037, 'eval_steps_per_second': 6.303, 'learning_rate': 0.0, 'epoch': 5.0}
+{'train_runtime': 2800.7642, 'train_samples_per_second': 29.831, 'train_steps_per_second': 1.866, 'train_loss': 0.4652703302556818, 'learning_rate': 0.0, 'epoch': 5.0}
+{'eval_loss': 0.7449883222579956, 'eval_maf': 0.4498913248913249, 'eval_map': 0.4962025316455696, 'eval_mar': 0.4330965909090909, 'eval_mif': 0.74, 'eval_mip': 0.74, 'eval_mir': 0.74, 'eval_avgf': 0.7001001701001701, 'eval_avgp': 0.6862784810126583, 'eval_avgr': 0.74, 'eval_mse': 1.08, 'eval_runtime': 1.1368, 'eval_samples_per_second': 87.969, 'eval_steps_per_second': 6.158, 'learning_rate': 0.0, 'epoch': 5.0}
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 196.23it/s]
+loading file ./tokenizer/vocab.txt
+loading file ./tokenizer/tokenizer.json
+loading file ./tokenizer/added_tokens.json
+loading file ./tokenizer/special_tokens_map.json
+loading file ./tokenizer/tokenizer_config.json
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/2/checkpoint-2089
+Configuration saved in ./testBetoTwitter/2/checkpoint-2089/config.json
+Model weights saved in ./testBetoTwitter/2/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/2/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/2/checkpoint-2089/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/2/checkpoint-4178
+Configuration saved in ./testBetoTwitter/2/checkpoint-4178/config.json
+Model weights saved in ./testBetoTwitter/2/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/2/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/2/checkpoint-4178/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/2/checkpoint-6267
+Configuration saved in ./testBetoTwitter/2/checkpoint-6267/config.json
+Model weights saved in ./testBetoTwitter/2/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/2/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/2/checkpoint-6267/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/2/checkpoint-8356
+Configuration saved in ./testBetoTwitter/2/checkpoint-8356/config.json
+Model weights saved in ./testBetoTwitter/2/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/2/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/2/checkpoint-8356/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/2/checkpoint-10445
+Configuration saved in ./testBetoTwitter/2/checkpoint-10445/config.json
+Model weights saved in ./testBetoTwitter/2/checkpoint-10445/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/2/checkpoint-10445/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/2/checkpoint-10445/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testBetoTwitter/2/checkpoint-4178 (score: 0.677715003490448).
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+[32m[I 2022-07-18 21:12:34,675][0m Trial 2 finished with value: 0.19705969306942148 and parameters: {'learning_rate': 2.3020632901480986e-05, 'weight_decay': 0.0035699982715580404, 'per_device_train_batch_size': 8}. Best is trial 2 with value: 0.19705969306942148.[0m
+loading configuration file ./model/config.json
+Model config BertConfig {
+  "_name_or_path": "./model/",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 31006
+}
+
+loading weights file ./model/pytorch_model.bin
+All model checkpoint weights were used when initializing BertForSequenceClassification.
+
+All the weights of BertForSequenceClassification were initialized from the model checkpoint at ./model/.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BertForSequenceClassification for predictions without further training.
+Using custom data configuration default-a1a1013d5c9373f1
+Reusing dataset csv (/mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+{'loss': 0.4866, 'learning_rate': 2.191863994305681e-05, 'epoch': 0.24}
+{'loss': 0.4208, 'learning_rate': 2.081664698463264e-05, 'epoch': 0.48}
+{'loss': 0.382, 'learning_rate': 1.9714654026208463e-05, 'epoch': 0.72}
+{'loss': 0.3635, 'learning_rate': 1.861266106778429e-05, 'epoch': 0.96}
+{'eval_loss': 0.7584586143493652, 'eval_maf': 0.7537227027358606, 'eval_map': 0.9215893108298171, 'eval_mar': 0.6847301136363637, 'eval_mif': 0.83, 'eval_mip': 0.83, 'eval_mir': 0.83, 'eval_avgf': 0.81229327689854, 'eval_avgp': 0.8592686357243319, 'eval_avgr': 0.83, 'eval_mse': 0.53, 'eval_runtime': 1.1449, 'eval_samples_per_second': 87.345, 'eval_steps_per_second': 11.355, 'learning_rate': 1.841650632118479e-05, 'epoch': 1.0}
+{'loss': 0.3121, 'learning_rate': 1.751066810936012e-05, 'epoch': 1.2}
+{'loss': 0.3135, 'learning_rate': 1.6408675150935944e-05, 'epoch': 1.44}
+{'loss': 0.282, 'learning_rate': 1.5306682192511772e-05, 'epoch': 1.68}
+{'loss': 0.2734, 'learning_rate': 1.4204689234087597e-05, 'epoch': 1.91}
+{'eval_loss': 0.677715003490448, 'eval_maf': 0.7544543312718246, 'eval_map': 0.8832539682539682, 'eval_mar': 0.6899147727272728, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8301750178804325, 'eval_avgp': 0.8511301587301587, 'eval_avgr': 0.84, 'eval_mse': 0.51, 'eval_runtime': 1.1471, 'eval_samples_per_second': 87.178, 'eval_steps_per_second': 11.333, 'learning_rate': 1.3812379740888592e-05, 'epoch': 2.0}
+{'loss': 0.1835, 'learning_rate': 1.3102696275663423e-05, 'epoch': 2.15}
+{'loss': 0.1625, 'learning_rate': 1.200070331723925e-05, 'epoch': 2.39}
+{'loss': 0.17, 'learning_rate': 1.0898710358815078e-05, 'epoch': 2.63}
+{'loss': 0.1773, 'learning_rate': 9.796717400390902e-06, 'epoch': 2.87}
+{'eval_loss': 0.7870495319366455, 'eval_maf': 0.8124820440996912, 'eval_map': 0.886437908496732, 'eval_mar': 0.759872159090909, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8441298570710335, 'eval_avgp': 0.8508986928104575, 'eval_avgr': 0.85, 'eval_mse': 0.53, 'eval_runtime': 1.1485, 'eval_samples_per_second': 87.07, 'eval_steps_per_second': 11.319, 'learning_rate': 9.208253160592394e-06, 'epoch': 3.0}
+{'loss': 0.1358, 'learning_rate': 8.694724441966729e-06, 'epoch': 3.11}
+{'loss': 0.093, 'learning_rate': 7.592731483542555e-06, 'epoch': 3.35}
+{'loss': 0.0667, 'learning_rate': 6.4907385251183824e-06, 'epoch': 3.59}
+{'loss': 0.0879, 'learning_rate': 5.388745566694209e-06, 'epoch': 3.83}
+{'eval_loss': 1.1730217933654785, 'eval_maf': 0.6856811145510835, 'eval_map': 0.8902725563909775, 'eval_mar': 0.6176846590909091, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8246934984520123, 'eval_avgp': 0.8487406015037594, 'eval_avgr': 0.84, 'eval_mse': 0.48, 'eval_runtime': 1.1497, 'eval_samples_per_second': 86.977, 'eval_steps_per_second': 11.307, 'learning_rate': 4.604126580296197e-06, 'epoch': 4.0}
+{'loss': 0.0628, 'learning_rate': 4.286752608270035e-06, 'epoch': 4.07}
+{'loss': 0.0353, 'learning_rate': 3.1847596498458615e-06, 'epoch': 4.31}
+{'loss': 0.0331, 'learning_rate': 2.0827666914216883e-06, 'epoch': 4.55}
+{'loss': 0.0397, 'learning_rate': 9.807737329975145e-07, 'epoch': 4.79}
+{'eval_loss': 1.3691339492797852, 'eval_maf': 0.7402415020062079, 'eval_map': 0.8848997493734336, 'eval_mar': 0.6649147727272727, 'eval_mif': 0.83, 'eval_mip': 0.83, 'eval_mir': 0.83, 'eval_avgf': 0.8187066394125219, 'eval_avgp': 0.8384862155388472, 'eval_avgr': 0.83, 'eval_mse': 0.55, 'eval_runtime': 1.1554, 'eval_samples_per_second': 86.553, 'eval_steps_per_second': 11.252, 'learning_rate': 0.0, 'epoch': 5.0}
+{'train_runtime': 3026.2329, 'train_samples_per_second': 27.609, 'train_steps_per_second': 3.451, 'train_loss': 0.19705969306942148, 'learning_rate': 0.0, 'epoch': 5.0}
+{'eval_loss': 0.677715003490448, 'eval_maf': 0.7544543312718246, 'eval_map': 0.8832539682539682, 'eval_mar': 0.6899147727272728, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8301750178804325, 'eval_avgp': 0.8511301587301587, 'eval_avgr': 0.84, 'eval_mse': 0.51, 'eval_runtime': 1.1534, 'eval_samples_per_second': 86.701, 'eval_steps_per_second': 11.271, 'learning_rate': 0.0, 'epoch': 5.0}
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 190.03it/s]
+loading file ./tokenizer/vocab.txt
+loading file ./tokenizer/tokenizer.json
+loading file ./tokenizer/added_tokens.json
+loading file ./tokenizer/special_tokens_map.json
+loading file ./tokenizer/tokenizer_config.json
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/3/checkpoint-2089
+Configuration saved in ./testBetoTwitter/3/checkpoint-2089/config.json
+Model weights saved in ./testBetoTwitter/3/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/3/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/3/checkpoint-2089/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/3/checkpoint-4178
+Configuration saved in ./testBetoTwitter/3/checkpoint-4178/config.json
+Model weights saved in ./testBetoTwitter/3/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/3/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/3/checkpoint-4178/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/3/checkpoint-6267
+Configuration saved in ./testBetoTwitter/3/checkpoint-6267/config.json
+Model weights saved in ./testBetoTwitter/3/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/3/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/3/checkpoint-6267/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/3/checkpoint-8356
+Configuration saved in ./testBetoTwitter/3/checkpoint-8356/config.json
+Model weights saved in ./testBetoTwitter/3/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/3/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/3/checkpoint-8356/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/3/checkpoint-10445
+Configuration saved in ./testBetoTwitter/3/checkpoint-10445/config.json
+Model weights saved in ./testBetoTwitter/3/checkpoint-10445/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/3/checkpoint-10445/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/3/checkpoint-10445/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testBetoTwitter/3/checkpoint-4178 (score: 0.6799806356430054).
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+[32m[I 2022-07-18 22:03:04,397][0m Trial 3 finished with value: 0.2014676838642447 and parameters: {'learning_rate': 1.522365602928222e-05, 'weight_decay': 0.00020840408427661358, 'per_device_train_batch_size': 8}. Best is trial 2 with value: 0.19705969306942148.[0m
+loading configuration file ./model/config.json
+Model config BertConfig {
+  "_name_or_path": "./model/",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 31006
+}
+
+loading weights file ./model/pytorch_model.bin
+All model checkpoint weights were used when initializing BertForSequenceClassification.
+
+All the weights of BertForSequenceClassification were initialized from the model checkpoint at ./model/.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BertForSequenceClassification for predictions without further training.
+Using custom data configuration default-a1a1013d5c9373f1
+Reusing dataset csv (/mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+{'loss': 0.4796, 'learning_rate': 1.4494902748799585e-05, 'epoch': 0.24}
+{'loss': 0.4163, 'learning_rate': 1.3766149468316952e-05, 'epoch': 0.48}
+{'loss': 0.377, 'learning_rate': 1.3037396187834317e-05, 'epoch': 0.72}
+{'loss': 0.3581, 'learning_rate': 1.2308642907351684e-05, 'epoch': 0.96}
+{'eval_loss': 0.6828716397285461, 'eval_maf': 0.7321076772689676, 'eval_map': 0.8993670886075948, 'eval_mar': 0.6733664772727272, 'eval_mif': 0.82, 'eval_mip': 0.82, 'eval_mir': 0.82, 'eval_avgf': 0.7983246860666217, 'eval_avgp': 0.850379746835443, 'eval_avgr': 0.82, 'eval_mse': 0.62, 'eval_runtime': 1.1503, 'eval_samples_per_second': 86.935, 'eval_steps_per_second': 11.302, 'learning_rate': 1.2178924823425777e-05, 'epoch': 1.0}
+{'loss': 0.3039, 'learning_rate': 1.1579889626869051e-05, 'epoch': 1.2}
+{'loss': 0.3014, 'learning_rate': 1.0851136346386418e-05, 'epoch': 1.44}
+{'loss': 0.2904, 'learning_rate': 1.0122383065903783e-05, 'epoch': 1.68}
+{'loss': 0.2666, 'learning_rate': 9.39362978542115e-06, 'epoch': 1.91}
+{'eval_loss': 0.6799806356430054, 'eval_maf': 0.7718599033816426, 'eval_map': 0.8916023166023166, 'eval_mar': 0.7149147727272727, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8406280193236715, 'eval_avgp': 0.8605019305019306, 'eval_avgr': 0.85, 'eval_mse': 0.5, 'eval_runtime': 1.1558, 'eval_samples_per_second': 86.522, 'eval_steps_per_second': 11.248, 'learning_rate': 9.134193617569332e-06, 'epoch': 2.0}
+{'loss': 0.1817, 'learning_rate': 8.664876504938515e-06, 'epoch': 2.15}
+{'loss': 0.1761, 'learning_rate': 7.936123224455882e-06, 'epoch': 2.39}
+{'loss': 0.1781, 'learning_rate': 7.207369943973248e-06, 'epoch': 2.63}
+{'loss': 0.1896, 'learning_rate': 6.478616663490614e-06, 'epoch': 2.87}
+{'eval_loss': 0.8412642478942871, 'eval_maf': 0.7254617453234433, 'eval_map': 0.9017145671053809, 'eval_mar': 0.6712357954545454, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8393683028458289, 'eval_avgp': 0.8578010564956575, 'eval_avgr': 0.85, 'eval_mse': 0.42, 'eval_runtime': 1.1462, 'eval_samples_per_second': 87.245, 'eval_steps_per_second': 11.342, 'learning_rate': 6.089462411712888e-06, 'epoch': 3.0}
+{'loss': 0.1308, 'learning_rate': 5.74986338300798e-06, 'epoch': 3.11}
+{'loss': 0.1145, 'learning_rate': 5.0211101025253465e-06, 'epoch': 3.35}
+{'loss': 0.0795, 'learning_rate': 4.292356822042713e-06, 'epoch': 3.59}
+{'loss': 0.0998, 'learning_rate': 3.563603541560079e-06, 'epoch': 3.83}
+{'eval_loss': 1.101620078086853, 'eval_maf': 0.7699088407292742, 'eval_map': 0.8142361111111112, 'eval_mar': 0.7406960227272728, 'eval_mif': 0.82, 'eval_mip': 0.82, 'eval_mir': 0.82, 'eval_avgf': 0.8135982112143103, 'eval_avgp': 0.8206944444444444, 'eval_avgr': 0.82, 'eval_mse': 0.54, 'eval_runtime': 1.1471, 'eval_samples_per_second': 87.178, 'eval_steps_per_second': 11.333, 'learning_rate': 3.044731205856444e-06, 'epoch': 4.0}
+{'loss': 0.0772, 'learning_rate': 2.834850261077445e-06, 'epoch': 4.07}
+{'loss': 0.0424, 'learning_rate': 2.1060969805948116e-06, 'epoch': 4.31}
+{'loss': 0.0366, 'learning_rate': 1.377343700112178e-06, 'epoch': 4.55}
+{'loss': 0.063, 'learning_rate': 6.485904196295441e-07, 'epoch': 4.79}
+{'eval_loss': 1.1668184995651245, 'eval_maf': 0.7672237162248687, 'eval_map': 0.8808266742770167, 'eval_mar': 0.7071022727272727, 'eval_mif': 0.83, 'eval_mip': 0.83, 'eval_mir': 0.83, 'eval_avgf': 0.8219874503777693, 'eval_avgp': 0.8336662861491628, 'eval_avgr': 0.83, 'eval_mse': 0.53, 'eval_runtime': 1.1553, 'eval_samples_per_second': 86.559, 'eval_steps_per_second': 11.253, 'learning_rate': 0.0, 'epoch': 5.0}
+{'train_runtime': 3023.3031, 'train_samples_per_second': 27.635, 'train_steps_per_second': 3.455, 'train_loss': 0.2014676838642447, 'learning_rate': 0.0, 'epoch': 5.0}
+{'eval_loss': 0.6799806356430054, 'eval_maf': 0.7718599033816426, 'eval_map': 0.8916023166023166, 'eval_mar': 0.7149147727272727, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8406280193236715, 'eval_avgp': 0.8605019305019306, 'eval_avgr': 0.85, 'eval_mse': 0.5, 'eval_runtime': 1.1643, 'eval_samples_per_second': 85.885, 'eval_steps_per_second': 11.165, 'learning_rate': 0.0, 'epoch': 5.0}
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 201.50it/s]
+loading file ./tokenizer/vocab.txt
+loading file ./tokenizer/tokenizer.json
+loading file ./tokenizer/added_tokens.json
+loading file ./tokenizer/special_tokens_map.json
+loading file ./tokenizer/tokenizer_config.json
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/4/checkpoint-2089
+Configuration saved in ./testBetoTwitter/4/checkpoint-2089/config.json
+Model weights saved in ./testBetoTwitter/4/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/4/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/4/checkpoint-2089/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/4/checkpoint-4178
+Configuration saved in ./testBetoTwitter/4/checkpoint-4178/config.json
+Model weights saved in ./testBetoTwitter/4/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/4/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/4/checkpoint-4178/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/4/checkpoint-6267
+Configuration saved in ./testBetoTwitter/4/checkpoint-6267/config.json
+Model weights saved in ./testBetoTwitter/4/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/4/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/4/checkpoint-6267/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoTwitter/4/checkpoint-8356
+Configuration saved in ./testBetoTwitter/4/checkpoint-8356/config.json
+Model weights saved in ./testBetoTwitter/4/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/4/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/4/checkpoint-8356/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testBetoTwitter/4/checkpoint-2089 (score: 0.6677717566490173).
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+[32m[I 2022-07-18 22:43:29,052][0m Trial 4 finished with value: 0.23561539953550464 and parameters: {'learning_rate': 1.778611675235635e-05, 'weight_decay': 0.00016413608443439825, 'per_device_train_batch_size': 8}. Best is trial 2 with value: 0.19705969306942148.[0m
+loading configuration file ./model/config.json
+Model config BertConfig {
+  "_name_or_path": "./model/",
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 31006
+}
+
+loading weights file ./model/pytorch_model.bin
+All model checkpoint weights were used when initializing BertForSequenceClassification.
+
+All the weights of BertForSequenceClassification were initialized from the model checkpoint at ./model/.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use BertForSequenceClassification for predictions without further training.
+Using custom data configuration default-a1a1013d5c9373f1
+Reusing dataset csv (/mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+{'loss': 0.4808, 'learning_rate': 1.693469900451737e-05, 'epoch': 0.24}
+{'loss': 0.4172, 'learning_rate': 1.6083281256678383e-05, 'epoch': 0.48}
+{'loss': 0.3765, 'learning_rate': 1.5231863508839401e-05, 'epoch': 0.72}
+{'loss': 0.3602, 'learning_rate': 1.4380445761000419e-05, 'epoch': 0.96}
+{'eval_loss': 0.6677717566490173, 'eval_maf': 0.7071265979716683, 'eval_map': 0.8114073426573426, 'eval_mar': 0.6558238636363636, 'eval_mif': 0.81, 'eval_mip': 0.81, 'eval_mir': 0.81, 'eval_avgf': 0.7928414934048736, 'eval_avgp': 0.8228846153846153, 'eval_avgr': 0.81, 'eval_mse': 0.61, 'eval_runtime': 1.1451, 'eval_samples_per_second': 87.325, 'eval_steps_per_second': 11.352, 'learning_rate': 1.4228893401885081e-05, 'epoch': 1.0}
+{'loss': 0.304, 'learning_rate': 1.3529028013161437e-05, 'epoch': 1.2}
+{'loss': 0.2984, 'learning_rate': 1.2677610265322455e-05, 'epoch': 1.44}
+{'loss': 0.2881, 'learning_rate': 1.1826192517483471e-05, 'epoch': 1.68}
+{'loss': 0.265, 'learning_rate': 1.0974774769644488e-05, 'epoch': 1.91}
+{'eval_loss': 0.7616161108016968, 'eval_maf': 0.6930587337909992, 'eval_map': 0.8726539039039038, 'eval_mar': 0.638778409090909, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8268619374523264, 'eval_avgp': 0.8464939939939938, 'eval_avgr': 0.84, 'eval_mse': 0.56, 'eval_runtime': 1.1483, 'eval_samples_per_second': 87.088, 'eval_steps_per_second': 11.321, 'learning_rate': 1.067167005141381e-05, 'epoch': 2.0}
+{'loss': 0.1806, 'learning_rate': 1.0123357021805506e-05, 'epoch': 2.15}
+{'loss': 0.1709, 'learning_rate': 9.271939273966522e-06, 'epoch': 2.39}
+{'loss': 0.1645, 'learning_rate': 8.42052152612754e-06, 'epoch': 2.63}
+{'loss': 0.1758, 'learning_rate': 7.569103778288557e-06, 'epoch': 2.87}
+{'eval_loss': 0.9510273933410645, 'eval_maf': 0.6785024154589372, 'eval_map': 0.862629173290938, 'eval_mar': 0.6196022727272728, 'eval_mif': 0.81, 'eval_mip': 0.81, 'eval_mir': 0.81, 'eval_avgf': 0.7969661835748792, 'eval_avgp': 0.8146542130365659, 'eval_avgr': 0.81, 'eval_mse': 0.55, 'eval_runtime': 1.1544, 'eval_samples_per_second': 86.624, 'eval_steps_per_second': 11.261, 'learning_rate': 7.114446700942541e-06, 'epoch': 3.0}
+{'loss': 0.1315, 'learning_rate': 6.717686030449574e-06, 'epoch': 3.11}
+{'loss': 0.0984, 'learning_rate': 5.866268282610591e-06, 'epoch': 3.35}
+{'loss': 0.076, 'learning_rate': 5.014850534771609e-06, 'epoch': 3.59}
+{'loss': 0.0885, 'learning_rate': 4.1634327869326256e-06, 'epoch': 3.83}
+{'eval_loss': 1.4420832395553589, 'eval_maf': 0.6618089340999558, 'eval_map': 0.8647791353383459, 'eval_mar': 0.5946022727272727, 'eval_mif': 0.8000000000000002, 'eval_mip': 0.8, 'eval_mir': 0.8, 'eval_avgf': 0.78568597965502, 'eval_avgp': 0.8097274436090225, 'eval_avgr': 0.8, 'eval_mse': 0.56, 'eval_runtime': 1.1469, 'eval_samples_per_second': 87.189, 'eval_steps_per_second': 11.335, 'learning_rate': 3.5572233504712703e-06, 'epoch': 4.0}
+{'train_runtime': 2418.2223, 'train_samples_per_second': 34.55, 'train_steps_per_second': 4.319, 'train_loss': 0.23561539953550464, 'learning_rate': 3.5572233504712703e-06, 'epoch': 4.0}
+{'eval_loss': 0.6677717566490173, 'eval_maf': 0.7071265979716683, 'eval_map': 0.8114073426573426, 'eval_mar': 0.6558238636363636, 'eval_mif': 0.81, 'eval_mip': 0.81, 'eval_mir': 0.81, 'eval_avgf': 0.7928414934048736, 'eval_avgp': 0.8228846153846153, 'eval_avgr': 0.81, 'eval_mse': 0.61, 'eval_runtime': 1.1579, 'eval_samples_per_second': 86.361, 'eval_steps_per_second': 11.227, 'learning_rate': 3.5572233504712703e-06, 'epoch': 4.0}
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|██████████| 3/3 [00:00<00:00, 203.33it/s]
+loading file ./tokenizer/vocab.txt
+loading file ./tokenizer/tokenizer.json
+loading file ./tokenizer/added_tokens.json
+loading file ./tokenizer/special_tokens_map.json
+loading file ./tokenizer/tokenizer_config.json
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 32
+  Total train batch size (w. parallel, distributed & accumulation) = 32
+  Gradient Accumulation steps = 1
+  Total optimization steps = 2615
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testBetoTwitter/5/checkpoint-523
+Configuration saved in ./testBetoTwitter/5/checkpoint-523/config.json
+Model weights saved in ./testBetoTwitter/5/checkpoint-523/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/5/checkpoint-523/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/5/checkpoint-523/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+Saving model checkpoint to ./testBetoTwitter/5/checkpoint-1046
+Configuration saved in ./testBetoTwitter/5/checkpoint-1046/config.json
+Model weights saved in ./testBetoTwitter/5/checkpoint-1046/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/5/checkpoint-1046/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/5/checkpoint-1046/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+Saving model checkpoint to ./testBetoTwitter/5/checkpoint-1569
+Configuration saved in ./testBetoTwitter/5/checkpoint-1569/config.json
+Model weights saved in ./testBetoTwitter/5/checkpoint-1569/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/5/checkpoint-1569/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/5/checkpoint-1569/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+Saving model checkpoint to ./testBetoTwitter/5/checkpoint-2092
+Configuration saved in ./testBetoTwitter/5/checkpoint-2092/config.json
+Model weights saved in ./testBetoTwitter/5/checkpoint-2092/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/5/checkpoint-2092/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/5/checkpoint-2092/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+Saving model checkpoint to ./testBetoTwitter/5/checkpoint-2615
+Configuration saved in ./testBetoTwitter/5/checkpoint-2615/config.json
+Model weights saved in ./testBetoTwitter/5/checkpoint-2615/pytorch_model.bin
+tokenizer config file saved in ./testBetoTwitter/5/checkpoint-2615/tokenizer_config.json
+Special tokens file saved in ./testBetoTwitter/5/checkpoint-2615/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testBetoTwitter/5/checkpoint-2092 (score: 0.5077062249183655).
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: media, influencer, influencer_gender, comment_id, comment. If media, influencer, influencer_gender, comment_id, comment are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+[32m[I 2022-07-18 23:28:32,793][0m Trial 5 finished with value: 0.26084028211196114 and parameters: {'learning_rate': 7.55108519294963e-06, 'weight_decay': 0.004315803706371027, 'per_device_train_batch_size': 32}. Best is trial 2 with value: 0.19705969306942148.[0m
+{'loss': 0.439, 'learning_rate': 6.107283052806297e-06, 'epoch': 0.96}
+{'eval_loss': 0.5989651679992676, 'eval_maf': 0.5880952380952381, 'eval_map': 0.6182330827067669, 'eval_mar': 0.5785511363636364, 'eval_mif': 0.82, 'eval_mip': 0.82, 'eval_mir': 0.82, 'eval_avgf': 0.7935238095238094, 'eval_avgp': 0.7906766917293233, 'eval_avgr': 0.82, 'eval_mse': 0.54, 'eval_runtime': 1.104, 'eval_samples_per_second': 90.581, 'eval_steps_per_second': 3.623, 'learning_rate': 6.040868154359704e-06, 'epoch': 1.0}
+{'loss': 0.2921, 'learning_rate': 4.663480912662964e-06, 'epoch': 1.91}
+{'eval_loss': 0.5357763767242432, 'eval_maf': 0.7492063492063491, 'eval_map': 0.886983082706767, 'eval_mar': 0.6785511363636363, 'eval_mif': 0.83, 'eval_mip': 0.83, 'eval_mir': 0.83, 'eval_avgf': 0.8179682539682538, 'eval_avgp': 0.8381766917293233, 'eval_avgr': 0.83, 'eval_mse': 0.58, 'eval_runtime': 1.0978, 'eval_samples_per_second': 91.093, 'eval_steps_per_second': 3.644, 'learning_rate': 4.530651115769778e-06, 'epoch': 2.0}
+{'loss': 0.2363, 'learning_rate': 3.2196787725196318e-06, 'epoch': 2.87}
+{'eval_loss': 0.5402399301528931, 'eval_maf': 0.654271582733813, 'eval_map': 0.8594444444444445, 'eval_mar': 0.5887784090909091, 'eval_mif': 0.82, 'eval_mip': 0.82, 'eval_mir': 0.82, 'eval_avgf': 0.8034352517985611, 'eval_avgp': 0.8235111111111111, 'eval_avgr': 0.82, 'eval_mse': 0.61, 'eval_runtime': 1.0943, 'eval_samples_per_second': 91.381, 'eval_steps_per_second': 3.655, 'learning_rate': 3.020434077179852e-06, 'epoch': 3.0}
+{'loss': 0.193, 'learning_rate': 1.7758766323762992e-06, 'epoch': 3.82}
+{'eval_loss': 0.5077062249183655, 'eval_maf': 0.7503693639515632, 'eval_map': 0.889702380952381, 'eval_mar': 0.6762784090909091, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8302954169172402, 'eval_avgp': 0.8472809523809524, 'eval_avgr': 0.84, 'eval_mse': 0.43, 'eval_runtime': 1.0936, 'eval_samples_per_second': 91.445, 'eval_steps_per_second': 3.658, 'learning_rate': 1.510217038589926e-06, 'epoch': 4.0}
+{'loss': 0.1677, 'learning_rate': 3.320744922329665e-07, 'epoch': 4.78}
+{'eval_loss': 0.5442647337913513, 'eval_maf': 0.7444146271647345, 'eval_map': 0.8710589258534464, 'eval_mar': 0.6762784090909091, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8305249749534852, 'eval_avgp': 0.8403870406610132, 'eval_avgr': 0.84, 'eval_mse': 0.59, 'eval_runtime': 1.0951, 'eval_samples_per_second': 91.312, 'eval_steps_per_second': 3.652, 'learning_rate': 0.0, 'epoch': 5.0}
+{'train_runtime': 2697.3832, 'train_samples_per_second': 30.974, 'train_steps_per_second': 0.969, 'train_loss': 0.26084028211196114, 'learning_rate': 0.0, 'epoch': 5.0}
+{'eval_loss': 0.5077062249183655, 'eval_maf': 0.7503693639515632, 'eval_map': 0.889702380952381, 'eval_mar': 0.6762784090909091, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8302954169172402, 'eval_avgp': 0.8472809523809524, 'eval_avgr': 0.84, 'eval_mse': 0.43, 'eval_runtime': 1.1011, 'eval_samples_per_second': 90.816, 'eval_steps_per_second': 3.633, 'learning_rate': 0.0, 'epoch': 5.0}

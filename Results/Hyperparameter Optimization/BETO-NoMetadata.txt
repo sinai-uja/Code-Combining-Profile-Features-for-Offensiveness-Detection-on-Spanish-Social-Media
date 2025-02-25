@@ -1,0 +1,450 @@
+[I 2022-07-17 07:23:23,491] A new study created in memory with name: hyper-parameter-search
+Downloading: 100%
+648/648 [00:00<00:00, 8.13kB/s]
+Downloading: 100%
+419M/419M [00:16<00:00, 58.9MB/s]
+Some weights of the model checkpoint at dccuchile/bert-base-spanish-wwm-cased were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at dccuchile/bert-base-spanish-wwm-cased and are newly initialized: ['bert.pooler.dense.weight', 'classifier.weight', 'bert.pooler.dense.bias', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using custom data configuration default-bdf2d38ff4c39ebf
+Downloading and preparing dataset csv/default to /root/.cache/huggingface/datasets/csv/default-bdf2d38ff4c39ebf/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58...
+Downloading data files: 100%
+3/3 [00:00<00:00, 83.58it/s]
+Extracting data files: 100%
+3/3 [00:00<00:00, 39.55it/s]
+1/? [00:00<00:00, 7.87 tables/s]
+1/? [00:00<00:00, 8.97 tables/s]
+0/? [00:00<?, ? tables/s]
+Dataset csv downloaded and prepared to /root/.cache/huggingface/datasets/csv/default-bdf2d38ff4c39ebf/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58. Subsequent calls will reuse this data.
+100%
+3/3 [00:00<00:00, 51.96it/s]
+Downloading: 100%
+364/364 [00:00<00:00, 12.0kB/s]
+Downloading: 100%
+236k/236k [00:00<00:00, 3.25MB/s]
+Downloading: 100%
+469k/469k [00:00<00:00, 4.84MB/s]
+Downloading: 100%
+134/134 [00:00<00:00, 3.54kB/s]
+Parameter 'function'=<function Pruebas.preprocess_text at 0x7fd1c42423b0> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+100%
+17/17 [00:04<00:00, 4.27ba/s]
+100%
+14/14 [00:03<00:00, 4.16ba/s]
+100%
+1/1 [00:00<00:00, 12.55ba/s]
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+/usr/local/lib/python3.7/dist-packages/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+{'loss': 0.5432, 'learning_rate': 5.280879284189136e-06, 'epoch': 0.24}
+{'loss': 0.4236, 'learning_rate': 5.015375046673342e-06, 'epoch': 0.48}
+{'loss': 0.3793, 'learning_rate': 4.7498708091575485e-06, 'epoch': 0.72}
+{'loss': 0.3567, 'learning_rate': 4.484366571641754e-06, 'epoch': 0.96}
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoNormal/0/checkpoint-2089
+Configuration saved in ./testBetoNormal/0/checkpoint-2089/config.json
+{'eval_loss': 0.638001561164856, 'eval_maf': 0.6765297202797204, 'eval_map': 0.8993670886075948, 'eval_mar': 0.6222301136363637, 'eval_mif': 0.82, 'eval_mip': 0.82, 'eval_mir': 0.82, 'eval_avgf': 0.797416083916084, 'eval_avgp': 0.850379746835443, 'eval_avgr': 0.82, 'eval_mse': 0.57, 'eval_runtime': 3.4221, 'eval_samples_per_second': 29.222, 'eval_steps_per_second': 3.799, 'learning_rate': 4.437106817363944e-06, 'epoch': 1.0}
+Model weights saved in ./testBetoNormal/0/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testBetoNormal/0/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testBetoNormal/0/checkpoint-2089/special_tokens_map.json
+{'loss': 0.3361, 'learning_rate': 4.218862334125962e-06, 'epoch': 1.2}
+{'loss': 0.3342, 'learning_rate': 3.9533580966101675e-06, 'epoch': 1.44}
+{'loss': 0.3091, 'learning_rate': 3.6878538590943738e-06, 'epoch': 1.68}
+{'loss': 0.2991, 'learning_rate': 3.42234962157858e-06, 'epoch': 1.91}
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoNormal/0/checkpoint-4178
+Configuration saved in ./testBetoNormal/0/checkpoint-4178/config.json
+{'eval_loss': 0.568241536617279, 'eval_maf': 0.798256131936556, 'eval_map': 0.9322222222222222, 'eval_mar': 0.7301846590909091, 'eval_mif': 0.87, 'eval_mip': 0.87, 'eval_mir': 0.87, 'eval_avgf': 0.8621321889856536, 'eval_avgp': 0.8864888888888888, 'eval_avgr': 0.87, 'eval_mse': 0.37, 'eval_runtime': 3.4281, 'eval_samples_per_second': 29.171, 'eval_steps_per_second': 3.792, 'learning_rate': 3.3278301130229576e-06, 'epoch': 2.0}
+Model weights saved in ./testBetoNormal/0/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testBetoNormal/0/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testBetoNormal/0/checkpoint-4178/special_tokens_map.json
+{'loss': 0.2522, 'learning_rate': 3.1568453840627866e-06, 'epoch': 2.15}
+{'loss': 0.2591, 'learning_rate': 2.891341146546993e-06, 'epoch': 2.39}
+{'loss': 0.2641, 'learning_rate': 2.6258369090311995e-06, 'epoch': 2.63}
+{'loss': 0.2657, 'learning_rate': 2.3603326715154057e-06, 'epoch': 2.87}
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoNormal/0/checkpoint-6267
+Configuration saved in ./testBetoNormal/0/checkpoint-6267/config.json
+{'eval_loss': 0.6331126689910889, 'eval_maf': 0.7600826283690734, 'eval_map': 0.8943334090392914, 'eval_mar': 0.6876420454545454, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8415581349596696, 'eval_avgp': 0.8560481489893255, 'eval_avgr': 0.85, 'eval_mse': 0.47, 'eval_runtime': 3.4253, 'eval_samples_per_second': 29.194, 'eval_steps_per_second': 3.795, 'learning_rate': 2.218553408681972e-06, 'epoch': 3.0}
+Model weights saved in ./testBetoNormal/0/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testBetoNormal/0/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testBetoNormal/0/checkpoint-6267/special_tokens_map.json
+{'loss': 0.2326, 'learning_rate': 2.094828433999612e-06, 'epoch': 3.11}
+{'loss': 0.226, 'learning_rate': 1.8293241964838181e-06, 'epoch': 3.35}
+{'loss': 0.1939, 'learning_rate': 1.5638199589680248e-06, 'epoch': 3.59}
+{'loss': 0.2117, 'learning_rate': 1.298315721452231e-06, 'epoch': 3.83}
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoNormal/0/checkpoint-8356
+Configuration saved in ./testBetoNormal/0/checkpoint-8356/config.json
+{'eval_loss': 0.6951392889022827, 'eval_maf': 0.7635272586884054, 'eval_map': 0.905327380952381, 'eval_mar': 0.6876420454545454, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8418743642856613, 'eval_avgp': 0.8610309523809524, 'eval_avgr': 0.85, 'eval_mse': 0.39, 'eval_runtime': 3.4241, 'eval_samples_per_second': 29.205, 'eval_steps_per_second': 3.797, 'learning_rate': 1.109276704340986e-06, 'epoch': 4.0}
+Model weights saved in ./testBetoNormal/0/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testBetoNormal/0/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testBetoNormal/0/checkpoint-8356/special_tokens_map.json
+{'loss': 0.1968, 'learning_rate': 1.0328114839364372e-06, 'epoch': 4.07}
+{'loss': 0.1898, 'learning_rate': 7.673072464206436e-07, 'epoch': 4.31}
+{'loss': 0.1742, 'learning_rate': 5.0180300890485e-07, 'epoch': 4.55}
+{'loss': 0.1822, 'learning_rate': 2.3629877138905637e-07, 'epoch': 4.79}
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testBetoNormal/0/checkpoint-10445
+Configuration saved in ./testBetoNormal/0/checkpoint-10445/config.json
+{'eval_loss': 0.690687894821167, 'eval_maf': 0.7666944983121453, 'eval_map': 0.8325163398692811, 'eval_mar': 0.7200994318181819, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8552653882065647, 'eval_avgp': 0.8634477124183008, 'eval_avgr': 0.86, 'eval_mse': 0.35, 'eval_runtime': 3.424, 'eval_samples_per_second': 29.206, 'eval_steps_per_second': 3.797, 'learning_rate': 0.0, 'epoch': 5.0}
+Model weights saved in ./testBetoNormal/0/checkpoint-10445/pytorch_model.bin
+tokenizer config file saved in ./testBetoNormal/0/checkpoint-10445/tokenizer_config.json
+Special tokens file saved in ./testBetoNormal/0/checkpoint-10445/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testBetoNormal/0/checkpoint-4178 (score: 0.568241536617279).
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+{'train_runtime': 7870.6176, 'train_samples_per_second': 10.615, 'train_steps_per_second': 1.327, 'train_loss': 0.2765321219349775, 'learning_rate': 0.0, 'epoch': 5.0}
+[I 2022-07-17 09:35:12,297] Trial 0 finished with value: 0.2765321219349775 and parameters: {'learning_rate': 5.546383521704929e-06, 'weight_decay': 0.00014221440749532952, 'per_device_train_batch_size': 8}. Best is trial 0 with value: 0.2765321219349775.
+loading configuration file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/cb7cedb04246e225d56ba26d207f1d1809b31a9bbe9b63103371d835c6ac0502.f4e4777229bac528fa2a8d4833e2ef53624e985ebde0fd527064a5cc7c50832b
+Model config BertConfig {
+  "_name_or_path": "dccuchile/bert-base-spanish-wwm-cased",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 31002
+}
+
+{'eval_loss': 0.568241536617279, 'eval_maf': 0.798256131936556, 'eval_map': 0.9322222222222222, 'eval_mar': 0.7301846590909091, 'eval_mif': 0.87, 'eval_mip': 0.87, 'eval_mir': 0.87, 'eval_avgf': 0.8621321889856536, 'eval_avgp': 0.8864888888888888, 'eval_avgr': 0.87, 'eval_mse': 0.37, 'eval_runtime': 3.3926, 'eval_samples_per_second': 29.476, 'eval_steps_per_second': 3.832, 'learning_rate': 0.0, 'epoch': 5.0}
+loading weights file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/52382cbe7c1587c6b588daa81eaf247c5e2ad073d42b52192a8cd4202e7429b6.a88ccd19b1f271e63b6a901510804e6c0318089355c471334fe8b71b316a30ab
+Some weights of the model checkpoint at dccuchile/bert-base-spanish-wwm-cased were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at dccuchile/bert-base-spanish-wwm-cased and are newly initialized: ['bert.pooler.dense.weight', 'classifier.weight', 'bert.pooler.dense.bias', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using custom data configuration default-bdf2d38ff4c39ebf
+Reusing dataset csv (/root/.cache/huggingface/datasets/csv/default-bdf2d38ff4c39ebf/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+100%
+3/3 [00:00<00:00, 19.48it/s]
+loading configuration file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/cb7cedb04246e225d56ba26d207f1d1809b31a9bbe9b63103371d835c6ac0502.f4e4777229bac528fa2a8d4833e2ef53624e985ebde0fd527064a5cc7c50832b
+Model config BertConfig {
+  "_name_or_path": "dccuchile/bert-base-spanish-wwm-cased",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 31002
+}
+
+loading file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/vocab.txt from cache at /root/.cache/huggingface/transformers/6761cd0c3d282272f598fcc1fa8c4ecfff8c18762ec8acb40f9cbb562cb0901e.6587bde86239957281af55b2f7e564df111a2b4f9dfc0ad884f13ea7106e4dfb
+loading file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/44de7af89c157bf67367a71105165d92bebe0585543739a918e3870d25484c27.6a099cd4b12bf7db174fffe48b004eb919c325f108e0c36176a0fe0ad1848d31
+loading file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/special_tokens_map.json from cache at /root/.cache/huggingface/transformers/9848a00af462c42dfb4ec88ef438fbab5256330f7f6f50badc48d277f9367d49.f982506b52498d4adb4bd491f593dc92b2ef6be61bfdbe9d30f53f963f9f5b66
+loading file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/tokenizer_config.json from cache at /root/.cache/huggingface/transformers/ca34e6c1251888a8ed98da2a454f869d28e3438eef67c2f93aa8133459ac08a3.0e90f656d0426b15b4927d1fe8ca5ec4c2e7b0d0e878c9153c3ddc6ed9bbed3c
+loading configuration file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/cb7cedb04246e225d56ba26d207f1d1809b31a9bbe9b63103371d835c6ac0502.f4e4777229bac528fa2a8d4833e2ef53624e985ebde0fd527064a5cc7c50832b
+Model config BertConfig {
+  "_name_or_path": "dccuchile/bert-base-spanish-wwm-cased",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 31002
+}
+
+100%
+17/17 [00:05<00:00, 2.82ba/s]
+100%
+14/14 [00:03<00:00, 4.12ba/s]
+100%
+1/1 [00:00<00:00, 12.38ba/s]
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+/usr/local/lib/python3.7/dist-packages/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 16
+  Total train batch size (w. parallel, distributed & accumulation) = 16
+  Gradient Accumulation steps = 1
+  Total optimization steps = 5225
+{'loss': 0.5379, 'learning_rate': 3.51856540856009e-06, 'epoch': 0.48}
+{'loss': 0.3631, 'learning_rate': 3.1462304446912974e-06, 'epoch': 0.96}
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testBetoNormal/1/checkpoint-1045
+Configuration saved in ./testBetoNormal/1/checkpoint-1045/config.json
+{'eval_loss': 0.5373882055282593, 'eval_maf': 0.6247155049786629, 'eval_map': 0.6627923976608188, 'eval_mar': 0.6051846590909091, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.826697012802276, 'eval_avgp': 0.8247485380116959, 'eval_avgr': 0.85, 'eval_mse': 0.39, 'eval_runtime': 3.4234, 'eval_samples_per_second': 29.211, 'eval_steps_per_second': 2.045, 'learning_rate': 3.1127202979431065e-06, 'epoch': 1.0}
+Model weights saved in ./testBetoNormal/1/checkpoint-1045/pytorch_model.bin
+tokenizer config file saved in ./testBetoNormal/1/checkpoint-1045/tokenizer_config.json
+Special tokens file saved in ./testBetoNormal/1/checkpoint-1045/special_tokens_map.json
+{'loss': 0.3329, 'learning_rate': 2.773895480822505e-06, 'epoch': 1.44}
+{'loss': 0.2982, 'learning_rate': 2.4015605169537124e-06, 'epoch': 1.91}
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+Saving model checkpoint to ./testBetoNormal/1/checkpoint-2090
+Configuration saved in ./testBetoNormal/1/checkpoint-2090/config.json
+{'eval_loss': 0.5187726616859436, 'eval_maf': 0.798256131936556, 'eval_map': 0.9322222222222222, 'eval_mar': 0.7301846590909091, 'eval_mif': 0.87, 'eval_mip': 0.87, 'eval_mir': 0.87, 'eval_avgf': 0.8621321889856536, 'eval_avgp': 0.8864888888888888, 'eval_avgr': 0.87, 'eval_mse': 0.37, 'eval_runtime': 3.4206, 'eval_samples_per_second': 29.235, 'eval_steps_per_second': 2.046, 'learning_rate': 2.3345402234573298e-06, 'epoch': 2.0}
+Model weights saved in ./testBetoNormal/1/checkpoint-2090/pytorch_model.bin
+tokenizer config file saved in ./testBetoNormal/1/checkpoint-2090/tokenizer_config.json
+Special tokens file saved in ./testBetoNormal/1/checkpoint-2090/special_tokens_map.json
+{'loss': 0.2667, 'learning_rate': 2.0292255530849195e-06, 'epoch': 2.39}
+{'loss': 0.2654, 'learning_rate': 1.656890589216127e-06, 'epoch': 2.87}
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+Saving model checkpoint to ./testBetoNormal/1/checkpoint-3135
+Configuration saved in ./testBetoNormal/1/checkpoint-3135/config.json
+{'eval_loss': 0.4990219175815582, 'eval_maf': 0.7769190053362716, 'eval_map': 0.9120833333333334, 'eval_mar': 0.705184659090909, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8510748158230171, 'eval_avgp': 0.8704333333333334, 'eval_avgr': 0.86, 'eval_mse': 0.46, 'eval_runtime': 3.4181, 'eval_samples_per_second': 29.256, 'eval_steps_per_second': 2.048, 'learning_rate': 1.5563601489715533e-06, 'epoch': 3.0}
+Model weights saved in ./testBetoNormal/1/checkpoint-3135/pytorch_model.bin
+tokenizer config file saved in ./testBetoNormal/1/checkpoint-3135/tokenizer_config.json
+Special tokens file saved in ./testBetoNormal/1/checkpoint-3135/special_tokens_map.json
+{'loss': 0.2431, 'learning_rate': 1.2845556253473346e-06, 'epoch': 3.35}
+{'loss': 0.2332, 'learning_rate': 9.122206614785419e-07, 'epoch': 3.83}
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+Saving model checkpoint to ./testBetoNormal/1/checkpoint-4180
+Configuration saved in ./testBetoNormal/1/checkpoint-4180/config.json
+{'eval_loss': 0.4888162612915039, 'eval_maf': 0.7455441052563355, 'eval_map': 0.8775, 'eval_mar': 0.6762784090909091, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.830755071618381, 'eval_avgp': 0.8493999999999999, 'eval_avgr': 0.84, 'eval_mse': 0.48, 'eval_runtime': 3.4296, 'eval_samples_per_second': 29.158, 'eval_steps_per_second': 2.041, 'learning_rate': 7.781800744857766e-07, 'epoch': 4.0}
+Model weights saved in ./testBetoNormal/1/checkpoint-4180/pytorch_model.bin
+tokenizer config file saved in ./testBetoNormal/1/checkpoint-4180/tokenizer_config.json
+Special tokens file saved in ./testBetoNormal/1/checkpoint-4180/special_tokens_map.json
+{'loss': 0.2272, 'learning_rate': 5.398856976097493e-07, 'epoch': 4.31}
+{'loss': 0.2104, 'learning_rate': 1.6755073374095668e-07, 'epoch': 4.78}
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+Saving model checkpoint to ./testBetoNormal/1/checkpoint-5225
+Configuration saved in ./testBetoNormal/1/checkpoint-5225/config.json
+{'eval_loss': 0.4707854986190796, 'eval_maf': 0.757715456524523, 'eval_map': 0.8720985540334856, 'eval_mar': 0.697372159090909, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8323831476501472, 'eval_avgp': 0.845072298325723, 'eval_avgr': 0.84, 'eval_mse': 0.51, 'eval_runtime': 3.4216, 'eval_samples_per_second': 29.226, 'eval_steps_per_second': 2.046, 'learning_rate': 0.0, 'epoch': 5.0}
+Model weights saved in ./testBetoNormal/1/checkpoint-5225/pytorch_model.bin
+tokenizer config file saved in ./testBetoNormal/1/checkpoint-5225/tokenizer_config.json
+Special tokens file saved in ./testBetoNormal/1/checkpoint-5225/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testBetoNormal/1/checkpoint-5225 (score: 0.4707854986190796).
+The following columns in the evaluation set don't have a corresponding argument in `BertForSequenceClassification.forward` and have been ignored: influencer_gender, influencer, comment, comment_id, media. If influencer_gender, influencer, comment, comment_id, media are not expected by `BertForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+{'train_runtime': 7578.5044, 'train_samples_per_second': 11.025, 'train_steps_per_second': 0.689, 'train_loss': 0.2938027596359618, 'learning_rate': 0.0, 'epoch': 5.0}
+[I 2022-07-17 11:41:49,986] Trial 1 finished with value: 0.2938027596359618 and parameters: {'learning_rate': 3.890900372428883e-06, 'weight_decay': 5.2288284255980135e-05, 'per_device_train_batch_size': 16}. Best is trial 0 with value: 0.2765321219349775.
+loading configuration file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/cb7cedb04246e225d56ba26d207f1d1809b31a9bbe9b63103371d835c6ac0502.f4e4777229bac528fa2a8d4833e2ef53624e985ebde0fd527064a5cc7c50832b
+Model config BertConfig {
+  "_name_or_path": "dccuchile/bert-base-spanish-wwm-cased",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 31002
+}
+
+{'eval_loss': 0.4707854986190796, 'eval_maf': 0.757715456524523, 'eval_map': 0.8720985540334856, 'eval_mar': 0.697372159090909, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8323831476501472, 'eval_avgp': 0.845072298325723, 'eval_avgr': 0.84, 'eval_mse': 0.51, 'eval_runtime': 3.3966, 'eval_samples_per_second': 29.441, 'eval_steps_per_second': 2.061, 'learning_rate': 0.0, 'epoch': 5.0}
+loading weights file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/52382cbe7c1587c6b588daa81eaf247c5e2ad073d42b52192a8cd4202e7429b6.a88ccd19b1f271e63b6a901510804e6c0318089355c471334fe8b71b316a30ab
+Some weights of the model checkpoint at dccuchile/bert-base-spanish-wwm-cased were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at dccuchile/bert-base-spanish-wwm-cased and are newly initialized: ['bert.pooler.dense.weight', 'classifier.weight', 'bert.pooler.dense.bias', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using custom data configuration default-bdf2d38ff4c39ebf
+Reusing dataset csv (/root/.cache/huggingface/datasets/csv/default-bdf2d38ff4c39ebf/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+100%
+3/3 [00:00<00:00, 8.03it/s]
+loading configuration file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/cb7cedb04246e225d56ba26d207f1d1809b31a9bbe9b63103371d835c6ac0502.f4e4777229bac528fa2a8d4833e2ef53624e985ebde0fd527064a5cc7c50832b
+Model config BertConfig {
+  "_name_or_path": "dccuchile/bert-base-spanish-wwm-cased",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 31002
+}
+
+loading file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/vocab.txt from cache at /root/.cache/huggingface/transformers/6761cd0c3d282272f598fcc1fa8c4ecfff8c18762ec8acb40f9cbb562cb0901e.6587bde86239957281af55b2f7e564df111a2b4f9dfc0ad884f13ea7106e4dfb
+loading file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/44de7af89c157bf67367a71105165d92bebe0585543739a918e3870d25484c27.6a099cd4b12bf7db174fffe48b004eb919c325f108e0c36176a0fe0ad1848d31
+loading file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/special_tokens_map.json from cache at /root/.cache/huggingface/transformers/9848a00af462c42dfb4ec88ef438fbab5256330f7f6f50badc48d277f9367d49.f982506b52498d4adb4bd491f593dc92b2ef6be61bfdbe9d30f53f963f9f5b66
+loading file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/tokenizer_config.json from cache at /root/.cache/huggingface/transformers/ca34e6c1251888a8ed98da2a454f869d28e3438eef67c2f93aa8133459ac08a3.0e90f656d0426b15b4927d1fe8ca5ec4c2e7b0d0e878c9153c3ddc6ed9bbed3c
+loading configuration file https://huggingface.co/dccuchile/bert-base-spanish-wwm-cased/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/cb7cedb04246e225d56ba26d207f1d1809b31a9bbe9b63103371d835c6ac0502.f4e4777229bac528fa2a8d4833e2ef53624e985ebde0fd527064a5cc7c50832b
+Model config BertConfig {
+  "_name_or_path": "dccuchile/bert-base-spanish-wwm-cased",
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 31002
+}
+
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-bdf2d38ff4c39ebf/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-bdf2d38ff4c39ebf/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-bdf2d38ff4c39ebf/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow

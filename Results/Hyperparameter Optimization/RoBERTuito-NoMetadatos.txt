@@ -1,0 +1,1093 @@
+[I 2022-07-15 18:02:24,318] A new study created in memory with name: hyper-parameter-search
+Downloading: 100%
+925/925 [00:00<00:00, 11.1kB/s]
+Downloading: 100%
+415M/415M [00:15<00:00, 56.7MB/s]
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at pysentimiento/robertuito-sentiment-analysis and are newly initialized because the shapes did not match:
+- classifier.out_proj.weight: found shape torch.Size([3, 768]) in the checkpoint and torch.Size([4, 768]) in the model instantiated
+- classifier.out_proj.bias: found shape torch.Size([3]) in the checkpoint and torch.Size([4]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using custom data configuration default-49918a3497c70add
+Downloading and preparing dataset csv/default to /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58...
+Downloading data files: 100%
+3/3 [00:00<00:00, 90.19it/s]
+Extracting data files: 100%
+3/3 [00:00<00:00, 38.49it/s]
+1/? [00:00<00:00, 7.09 tables/s]
+1/? [00:00<00:00, 6.44 tables/s]
+0/? [00:00<?, ? tables/s]
+Dataset csv downloaded and prepared to /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58. Subsequent calls will reuse this data.
+100%
+3/3 [00:00<00:00, 50.13it/s]
+Downloading: 100%
+334/334 [00:00<00:00, 9.58kB/s]
+Downloading: 100%
+838k/838k [00:00<00:00, 1.22MB/s]
+Downloading: 100%
+150/150 [00:00<00:00, 4.91kB/s]
+Parameter 'function'=<function Pruebas.preprocess_text at 0x7ff1f99075f0> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+100%
+17/17 [00:02<00:00, 7.16ba/s]
+100%
+14/14 [00:02<00:00, 6.38ba/s]
+100%
+1/1 [00:00<00:00, 14.52ba/s]
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+/usr/local/lib/python3.7/dist-packages/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+{'loss': 0.557, 'learning_rate': 4.464854615198053e-06, 'epoch': 0.24}
+{'loss': 0.4237, 'learning_rate': 4.240377258978945e-06, 'epoch': 0.48}
+{'loss': 0.3697, 'learning_rate': 4.0158999027598375e-06, 'epoch': 0.72}
+{'loss': 0.3328, 'learning_rate': 3.7914225465407294e-06, 'epoch': 0.96}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaTwitter/0/checkpoint-2089
+Configuration saved in ./testRobertaTwitter/0/checkpoint-2089/config.json
+{'eval_loss': 0.6258943676948547, 'eval_maf': 0.5881959769139365, 'eval_map': 0.6409001956947162, 'eval_mar': 0.5626420454545454, 'eval_mif': 0.83, 'eval_mip': 0.83, 'eval_mir': 0.83, 'eval_avgf': 0.807758445085724, 'eval_avgp': 0.8007045009784736, 'eval_avgr': 0.83, 'eval_mse': 0.52, 'eval_runtime': 0.7583, 'eval_samples_per_second': 131.88, 'eval_steps_per_second': 17.144, 'learning_rate': 3.7514655771337287e-06, 'epoch': 1.0}
+Model weights saved in ./testRobertaTwitter/0/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/0/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/0/checkpoint-2089/special_tokens_map.json
+{'loss': 0.3203, 'learning_rate': 3.566945190321622e-06, 'epoch': 1.2}
+{'loss': 0.3095, 'learning_rate': 3.3424678341025145e-06, 'epoch': 1.44}
+{'loss': 0.3043, 'learning_rate': 3.1179904778834064e-06, 'epoch': 1.68}
+{'loss': 0.2981, 'learning_rate': 2.8935131216642987e-06, 'epoch': 1.91}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/0/checkpoint-4178
+Configuration saved in ./testRobertaTwitter/0/checkpoint-4178/config.json
+{'eval_loss': 0.5970860123634338, 'eval_maf': 0.7602725511898174, 'eval_map': 0.9158823529411765, 'eval_mar': 0.6801846590909091, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8397592695074709, 'eval_avgp': 0.8587764705882353, 'eval_avgr': 0.85, 'eval_mse': 0.5, 'eval_runtime': 0.7501, 'eval_samples_per_second': 133.318, 'eval_steps_per_second': 17.331, 'learning_rate': 2.8135991828502964e-06, 'epoch': 2.0}
+Model weights saved in ./testRobertaTwitter/0/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/0/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/0/checkpoint-4178/special_tokens_map.json
+{'loss': 0.2408, 'learning_rate': 2.669035765445191e-06, 'epoch': 2.15}
+{'loss': 0.2623, 'learning_rate': 2.444558409226083e-06, 'epoch': 2.39}
+{'loss': 0.2659, 'learning_rate': 2.2200810530069757e-06, 'epoch': 2.63}
+{'loss': 0.27, 'learning_rate': 1.9956036967878676e-06, 'epoch': 2.87}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/0/checkpoint-6267
+Configuration saved in ./testRobertaTwitter/0/checkpoint-6267/config.json
+{'eval_loss': 0.5766417980194092, 'eval_maf': 0.769927536231884, 'eval_map': 0.9211711711711712, 'eval_mar': 0.6915482954545454, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8510144927536232, 'eval_avgp': 0.8681981981981983, 'eval_avgr': 0.86, 'eval_mse': 0.46, 'eval_runtime': 0.7513, 'eval_samples_per_second': 133.099, 'eval_steps_per_second': 17.303, 'learning_rate': 1.8757327885668643e-06, 'epoch': 3.0}
+Model weights saved in ./testRobertaTwitter/0/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/0/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/0/checkpoint-6267/special_tokens_map.json
+{'loss': 0.2482, 'learning_rate': 1.7711263405687599e-06, 'epoch': 3.11}
+{'loss': 0.2189, 'learning_rate': 1.5466489843496522e-06, 'epoch': 3.35}
+{'loss': 0.2351, 'learning_rate': 1.3221716281305445e-06, 'epoch': 3.59}
+{'loss': 0.2323, 'learning_rate': 1.0976942719114368e-06, 'epoch': 3.83}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/0/checkpoint-8356
+Configuration saved in ./testRobertaTwitter/0/checkpoint-8356/config.json
+{'eval_loss': 0.6166409254074097, 'eval_maf': 0.769927536231884, 'eval_map': 0.9211711711711712, 'eval_mar': 0.6915482954545454, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8510144927536232, 'eval_avgp': 0.8681981981981983, 'eval_avgr': 0.86, 'eval_mse': 0.46, 'eval_runtime': 0.7464, 'eval_samples_per_second': 133.978, 'eval_steps_per_second': 17.417, 'learning_rate': 9.378663942834322e-07, 'epoch': 4.0}
+Model weights saved in ./testRobertaTwitter/0/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/0/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/0/checkpoint-8356/special_tokens_map.json
+{'loss': 0.2306, 'learning_rate': 8.732169156923291e-07, 'epoch': 4.07}
+{'loss': 0.2164, 'learning_rate': 6.487395594732214e-07, 'epoch': 4.31}
+{'loss': 0.2075, 'learning_rate': 4.242622032541136e-07, 'epoch': 4.55}
+{'loss': 0.2196, 'learning_rate': 1.997848470350059e-07, 'epoch': 4.79}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/0/checkpoint-10445
+Configuration saved in ./testRobertaTwitter/0/checkpoint-10445/config.json
+{'eval_loss': 0.6101372838020325, 'eval_maf': 0.769927536231884, 'eval_map': 0.9211711711711712, 'eval_mar': 0.6915482954545454, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8510144927536232, 'eval_avgp': 0.8681981981981983, 'eval_avgr': 0.86, 'eval_mse': 0.46, 'eval_runtime': 0.7565, 'eval_samples_per_second': 132.188, 'eval_steps_per_second': 17.184, 'learning_rate': 0.0, 'epoch': 5.0}
+Model weights saved in ./testRobertaTwitter/0/checkpoint-10445/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/0/checkpoint-10445/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/0/checkpoint-10445/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testRobertaTwitter/0/checkpoint-6267 (score: 0.5766417980194092).
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+{'train_runtime': 2204.2026, 'train_samples_per_second': 37.905, 'train_steps_per_second': 4.739, 'train_loss': 0.28495267847041983, 'learning_rate': 0.0, 'epoch': 5.0}
+[I 2022-07-15 18:39:41,806] Trial 0 finished with value: 0.28495267847041983 and parameters: {'learning_rate': 4.6893319714171605e-06, 'weight_decay': 0.00037301656206206106, 'per_device_train_batch_size': 8}. Best is trial 0 with value: 0.28495267847041983.
+{'eval_loss': 0.5766417980194092, 'eval_maf': 0.769927536231884, 'eval_map': 0.9211711711711712, 'eval_mar': 0.6915482954545454, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8510144927536232, 'eval_avgp': 0.8681981981981983, 'eval_avgr': 0.86, 'eval_mse': 0.46, 'eval_runtime': 0.8295, 'eval_samples_per_second': 120.549, 'eval_steps_per_second': 15.671, 'learning_rate': 0.0, 'epoch': 5.0}
+loading configuration file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/034fd09e9530137fb6e6c042529972a92619fb02df8b40e7a4cfc50090943c46.98e658c5b8878c67807e3287b07db9608dbd08a5b69ce09979c447190bbe8077
+Model config RobertaConfig {
+  "_name_or_path": "pysentimiento/robertuito-sentiment-analysis",
+  "architectures": [
+    "RobertaForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 130,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 30002
+}
+
+loading weights file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/46eaf2275c70a984feed87be9019d2c427e10e13e4498d391bedffc0c61b4991.01d3c05bd9b3f5c750a6a897fc7bc380ac6c30347fa348718ca5ed37b03fdd46
+All model checkpoint weights were used when initializing RobertaForSequenceClassification.
+
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at pysentimiento/robertuito-sentiment-analysis and are newly initialized because the shapes did not match:
+- classifier.out_proj.weight: found shape torch.Size([3, 768]) in the checkpoint and torch.Size([4, 768]) in the model instantiated
+- classifier.out_proj.bias: found shape torch.Size([3]) in the checkpoint and torch.Size([4]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using custom data configuration default-49918a3497c70add
+Reusing dataset csv (/root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+100%
+3/3 [00:00<00:00, 9.22it/s]
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/47dd2d3180a6186d30715516321375322e3a84d5e4656762e083091bbb5d5dc4.0843b07596b388e054bae078721182b4846b9e28a7bbf04d7079b274f8613ae3
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/special_tokens_map.json from cache at /root/.cache/huggingface/transformers/25e0e805456d2786a12b70b86278c6e839d19958cb4f541ee1f78621140098f7.0dc5b1041f62041ebbd23b1297f2f573769d5c97d8b7c28180ec86b8f6185aa8
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer_config.json from cache at /root/.cache/huggingface/transformers/4fdf9a5a8e0a6023e1a9cdef62921158c3db9545e73f8dc0f46340a21bbb64d5.50a2bcf7668df2ff5a82b7b0455533bb4c0db21e6e33565fa20fd7dc8a3be740
+100%
+17/17 [00:04<00:00, 4.52ba/s]
+100%
+14/14 [00:02<00:00, 6.48ba/s]
+100%
+1/1 [00:00<00:00, 12.98ba/s]
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+/usr/local/lib/python3.7/dist-packages/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+{'loss': 0.7653, 'learning_rate': 1.3162081367021747e-06, 'epoch': 0.24}
+{'loss': 0.5205, 'learning_rate': 1.2500337708549061e-06, 'epoch': 0.48}
+{'loss': 0.4695, 'learning_rate': 1.1838594050076373e-06, 'epoch': 0.72}
+{'loss': 0.4312, 'learning_rate': 1.1176850391603685e-06, 'epoch': 0.96}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaTwitter/1/checkpoint-2089
+Configuration saved in ./testRobertaTwitter/1/checkpoint-2089/config.json
+{'eval_loss': 0.8533354997634888, 'eval_maf': 0.31684981684981683, 'eval_map': 0.3074060949681077, 'eval_mar': 0.33700284090909094, 'eval_mif': 0.7100000000000001, 'eval_mip': 0.71, 'eval_mir': 0.71, 'eval_avgf': 0.6388278388278388, 'eval_avgp': 0.5893125442948264, 'eval_avgr': 0.71, 'eval_mse': 1.14, 'eval_runtime': 0.7524, 'eval_samples_per_second': 132.902, 'eval_steps_per_second': 17.277, 'learning_rate': 1.1059060020395548e-06, 'epoch': 1.0}
+Model weights saved in ./testRobertaTwitter/1/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/1/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/1/checkpoint-2089/special_tokens_map.json
+{'loss': 0.4231, 'learning_rate': 1.0515106733131e-06, 'epoch': 1.2}
+{'loss': 0.4012, 'learning_rate': 9.853363074658313e-07, 'epoch': 1.44}
+{'loss': 0.3915, 'learning_rate': 9.191619416185626e-07, 'epoch': 1.68}
+{'loss': 0.3823, 'learning_rate': 8.529875757712938e-07, 'epoch': 1.91}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaTwitter/1/checkpoint-4178
+Configuration saved in ./testRobertaTwitter/1/checkpoint-4178/config.json
+{'eval_loss': 0.7774775624275208, 'eval_maf': 0.5116538216630437, 'eval_map': 0.5517451298701299, 'eval_mar': 0.4921875, 'eval_mif': 0.78, 'eval_mip': 0.78, 'eval_mir': 0.78, 'eval_avgf': 0.7490288298970204, 'eval_avgp': 0.7380032467532467, 'eval_avgr': 0.78, 'eval_mse': 0.79, 'eval_runtime': 0.753, 'eval_samples_per_second': 132.809, 'eval_steps_per_second': 17.265, 'learning_rate': 8.294295015296661e-07, 'epoch': 2.0}
+Model weights saved in ./testRobertaTwitter/1/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/1/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/1/checkpoint-4178/special_tokens_map.json
+{'loss': 0.3402, 'learning_rate': 7.86813209924025e-07, 'epoch': 2.15}
+{'loss': 0.3516, 'learning_rate': 7.206388440767563e-07, 'epoch': 2.39}
+{'loss': 0.3461, 'learning_rate': 6.544644782294876e-07, 'epoch': 2.63}
+{'loss': 0.368, 'learning_rate': 5.882901123822189e-07, 'epoch': 2.87}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaTwitter/1/checkpoint-6267
+Configuration saved in ./testRobertaTwitter/1/checkpoint-6267/config.json
+{'eval_loss': 0.7551738023757935, 'eval_maf': 0.5116538216630437, 'eval_map': 0.5517451298701299, 'eval_mar': 0.4921875, 'eval_mif': 0.78, 'eval_mip': 0.78, 'eval_mir': 0.78, 'eval_avgf': 0.7490288298970204, 'eval_avgp': 0.7380032467532467, 'eval_avgr': 0.78, 'eval_mse': 0.79, 'eval_runtime': 0.7536, 'eval_samples_per_second': 132.702, 'eval_steps_per_second': 17.251, 'learning_rate': 5.529530010197774e-07, 'epoch': 3.0}
+Model weights saved in ./testRobertaTwitter/1/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/1/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/1/checkpoint-6267/special_tokens_map.json
+{'loss': 0.3406, 'learning_rate': 5.221157465349502e-07, 'epoch': 3.11}
+{'loss': 0.3291, 'learning_rate': 4.5594138068768145e-07, 'epoch': 3.35}
+{'loss': 0.3493, 'learning_rate': 3.897670148404128e-07, 'epoch': 3.59}
+{'loss': 0.3211, 'learning_rate': 3.2359264899314404e-07, 'epoch': 3.83}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaTwitter/1/checkpoint-8356
+Configuration saved in ./testRobertaTwitter/1/checkpoint-8356/config.json
+{'eval_loss': 0.7134774923324585, 'eval_maf': 0.5517453135100194, 'eval_map': 0.594703670942061, 'eval_mar': 0.5285511363636364, 'eval_mif': 0.8000000000000002, 'eval_mip': 0.8, 'eval_mir': 0.8, 'eval_avgf': 0.7728299935358759, 'eval_avgp': 0.7631136665192393, 'eval_avgr': 0.8, 'eval_mse': 0.69, 'eval_runtime': 0.754, 'eval_samples_per_second': 132.623, 'eval_steps_per_second': 17.241, 'learning_rate': 2.764765005098887e-07, 'epoch': 4.0}
+Model weights saved in ./testRobertaTwitter/1/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/1/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/1/checkpoint-8356/special_tokens_map.json
+{'loss': 0.3255, 'learning_rate': 2.574182831458753e-07, 'epoch': 4.07}
+{'loss': 0.355, 'learning_rate': 1.912439172986066e-07, 'epoch': 4.31}
+{'loss': 0.3031, 'learning_rate': 1.2506955145133789e-07, 'epoch': 4.55}
+{'loss': 0.3356, 'learning_rate': 5.8895185604069165e-08, 'epoch': 4.79}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaTwitter/1/checkpoint-10445
+Configuration saved in ./testRobertaTwitter/1/checkpoint-10445/config.json
+{'eval_loss': 0.7105295658111572, 'eval_maf': 0.5517453135100194, 'eval_map': 0.594703670942061, 'eval_mar': 0.5285511363636364, 'eval_mif': 0.8000000000000002, 'eval_mip': 0.8, 'eval_mir': 0.8, 'eval_avgf': 0.7728299935358759, 'eval_avgp': 0.7631136665192393, 'eval_avgr': 0.8, 'eval_mse': 0.69, 'eval_runtime': 0.7484, 'eval_samples_per_second': 133.61, 'eval_steps_per_second': 17.369, 'learning_rate': 0.0, 'epoch': 5.0}
+Model weights saved in ./testRobertaTwitter/1/checkpoint-10445/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/1/checkpoint-10445/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/1/checkpoint-10445/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testRobertaTwitter/1/checkpoint-10445 (score: 0.7105295658111572).
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+{'train_runtime': 2205.3338, 'train_samples_per_second': 37.885, 'train_steps_per_second': 4.736, 'train_loss': 0.38954978201479473, 'learning_rate': 0.0, 'epoch': 5.0}
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2022-07-15 19:16:42,339] Trial 1 finished with value: 0.38954978201479473 and parameters: {'learning_rate': 1.3823825025494435e-06, 'weight_decay': 4.574244370746413e-05, 'per_device_train_batch_size': 8}. Best is trial 0 with value: 0.28495267847041983.
+{'eval_loss': 0.7105295658111572, 'eval_maf': 0.5517453135100194, 'eval_map': 0.594703670942061, 'eval_mar': 0.5285511363636364, 'eval_mif': 0.8000000000000002, 'eval_mip': 0.8, 'eval_mir': 0.8, 'eval_avgf': 0.7728299935358759, 'eval_avgp': 0.7631136665192393, 'eval_avgr': 0.8, 'eval_mse': 0.69, 'eval_runtime': 0.7972, 'eval_samples_per_second': 125.438, 'eval_steps_per_second': 16.307, 'learning_rate': 0.0, 'epoch': 5.0}
+loading configuration file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/034fd09e9530137fb6e6c042529972a92619fb02df8b40e7a4cfc50090943c46.98e658c5b8878c67807e3287b07db9608dbd08a5b69ce09979c447190bbe8077
+Model config RobertaConfig {
+  "_name_or_path": "pysentimiento/robertuito-sentiment-analysis",
+  "architectures": [
+    "RobertaForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 130,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 30002
+}
+
+loading weights file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/46eaf2275c70a984feed87be9019d2c427e10e13e4498d391bedffc0c61b4991.01d3c05bd9b3f5c750a6a897fc7bc380ac6c30347fa348718ca5ed37b03fdd46
+All model checkpoint weights were used when initializing RobertaForSequenceClassification.
+
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at pysentimiento/robertuito-sentiment-analysis and are newly initialized because the shapes did not match:
+- classifier.out_proj.weight: found shape torch.Size([3, 768]) in the checkpoint and torch.Size([4, 768]) in the model instantiated
+- classifier.out_proj.bias: found shape torch.Size([3]) in the checkpoint and torch.Size([4]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using custom data configuration default-49918a3497c70add
+Reusing dataset csv (/root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+100%
+3/3 [00:00<00:00, 9.53it/s]
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/47dd2d3180a6186d30715516321375322e3a84d5e4656762e083091bbb5d5dc4.0843b07596b388e054bae078721182b4846b9e28a7bbf04d7079b274f8613ae3
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/special_tokens_map.json from cache at /root/.cache/huggingface/transformers/25e0e805456d2786a12b70b86278c6e839d19958cb4f541ee1f78621140098f7.0dc5b1041f62041ebbd23b1297f2f573769d5c97d8b7c28180ec86b8f6185aa8
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer_config.json from cache at /root/.cache/huggingface/transformers/4fdf9a5a8e0a6023e1a9cdef62921158c3db9545e73f8dc0f46340a21bbb64d5.50a2bcf7668df2ff5a82b7b0455533bb4c0db21e6e33565fa20fd7dc8a3be740
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+/usr/local/lib/python3.7/dist-packages/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+{'loss': 0.4677, 'learning_rate': 1.5052128824628791e-05, 'epoch': 0.24}
+{'loss': 0.3622, 'learning_rate': 1.4295360155718345e-05, 'epoch': 0.48}
+{'loss': 0.3506, 'learning_rate': 1.3538591486807897e-05, 'epoch': 0.72}
+{'loss': 0.3069, 'learning_rate': 1.278182281789745e-05, 'epoch': 0.96}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/2/checkpoint-2089
+Configuration saved in ./testRobertaTwitter/2/checkpoint-2089/config.json
+{'eval_loss': 0.5989296436309814, 'eval_maf': 0.7760057074472981, 'eval_map': 0.9342948717948718, 'eval_mar': 0.7, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8348099051827303, 'eval_avgp': 0.8667948717948718, 'eval_avgr': 0.85, 'eval_mse': 0.48, 'eval_runtime': 0.7476, 'eval_samples_per_second': 133.758, 'eval_steps_per_second': 17.388, 'learning_rate': 1.2647117994831392e-05, 'epoch': 1.0}
+Model weights saved in ./testRobertaTwitter/2/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/2/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/2/checkpoint-2089/special_tokens_map.json
+{'loss': 0.2602, 'learning_rate': 1.2025054148987006e-05, 'epoch': 1.2}
+{'loss': 0.2549, 'learning_rate': 1.1268285480076557e-05, 'epoch': 1.44}
+{'loss': 0.2471, 'learning_rate': 1.0511516811166111e-05, 'epoch': 1.68}
+{'loss': 0.2407, 'learning_rate': 9.754748142255663e-06, 'epoch': 1.91}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/2/checkpoint-4178
+Configuration saved in ./testRobertaTwitter/2/checkpoint-4178/config.json
+{'eval_loss': 0.5533663034439087, 'eval_maf': 0.7801065162907268, 'eval_map': 0.9449013157894737, 'eval_mar': 0.6954545454545454, 'eval_mif': 0.87, 'eval_mip': 0.87, 'eval_mir': 0.87, 'eval_avgf': 0.8604937343358395, 'eval_avgp': 0.8851973684210526, 'eval_avgr': 0.87, 'eval_mse': 0.34, 'eval_runtime': 0.7512, 'eval_samples_per_second': 133.118, 'eval_steps_per_second': 17.305, 'learning_rate': 9.485338496123543e-06, 'epoch': 2.0}
+Model weights saved in ./testRobertaTwitter/2/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/2/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/2/checkpoint-4178/special_tokens_map.json
+{'loss': 0.1572, 'learning_rate': 8.997979473345216e-06, 'epoch': 2.15}
+{'loss': 0.1425, 'learning_rate': 8.241210804434768e-06, 'epoch': 2.39}
+{'loss': 0.1603, 'learning_rate': 7.484442135524322e-06, 'epoch': 2.63}
+{'loss': 0.1729, 'learning_rate': 6.7276734666138745e-06, 'epoch': 2.87}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/2/checkpoint-6267
+Configuration saved in ./testRobertaTwitter/2/checkpoint-6267/config.json
+{'eval_loss': 0.6870217323303223, 'eval_maf': 0.7633771929824561, 'eval_map': 0.9259868421052632, 'eval_mar': 0.6801846590909091, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8397719298245615, 'eval_avgp': 0.8630263157894738, 'eval_avgr': 0.85, 'eval_mse': 0.42, 'eval_runtime': 0.7502, 'eval_samples_per_second': 133.297, 'eval_steps_per_second': 17.329, 'learning_rate': 6.323558997415696e-06, 'epoch': 3.0}
+Model weights saved in ./testRobertaTwitter/2/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/2/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/2/checkpoint-6267/special_tokens_map.json
+{'loss': 0.1235, 'learning_rate': 5.970904797703427e-06, 'epoch': 3.11}
+{'loss': 0.0955, 'learning_rate': 5.21413612879298e-06, 'epoch': 3.35}
+{'loss': 0.0826, 'learning_rate': 4.4573674598825335e-06, 'epoch': 3.59}
+{'loss': 0.0985, 'learning_rate': 3.700598790972086e-06, 'epoch': 3.83}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/2/checkpoint-8356
+Configuration saved in ./testRobertaTwitter/2/checkpoint-8356/config.json
+{'eval_loss': 0.9942806959152222, 'eval_maf': 0.7506825265317394, 'eval_map': 0.9162087912087912, 'eval_mar': 0.6688210227272727, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8285707973330178, 'eval_avgp': 0.8626373626373627, 'eval_avgr': 0.84, 'eval_mse': 0.43, 'eval_runtime': 0.7508, 'eval_samples_per_second': 133.19, 'eval_steps_per_second': 17.315, 'learning_rate': 3.161779498707848e-06, 'epoch': 4.0}
+Model weights saved in ./testRobertaTwitter/2/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/2/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/2/checkpoint-8356/special_tokens_map.json
+{'loss': 0.0796, 'learning_rate': 2.943830122061639e-06, 'epoch': 4.07}
+{'loss': 0.0538, 'learning_rate': 2.187061453151192e-06, 'epoch': 4.31}
+{'loss': 0.0467, 'learning_rate': 1.430292784240745e-06, 'epoch': 4.55}
+{'loss': 0.0577, 'learning_rate': 6.73524115330298e-07, 'epoch': 4.79}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/2/checkpoint-10445
+Configuration saved in ./testRobertaTwitter/2/checkpoint-10445/config.json
+{'eval_loss': 1.0494569540023804, 'eval_maf': 0.7708399576046634, 'eval_map': 0.9215225563909775, 'eval_mar': 0.6915482954545454, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8516332803391627, 'eval_avgp': 0.8762406015037594, 'eval_avgr': 0.86, 'eval_mse': 0.35, 'eval_runtime': 0.753, 'eval_samples_per_second': 132.799, 'eval_steps_per_second': 17.264, 'learning_rate': 0.0, 'epoch': 5.0}
+Model weights saved in ./testRobertaTwitter/2/checkpoint-10445/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/2/checkpoint-10445/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/2/checkpoint-10445/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testRobertaTwitter/2/checkpoint-4178 (score: 0.5533663034439087).
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+{'train_runtime': 2206.1496, 'train_samples_per_second': 37.871, 'train_steps_per_second': 4.734, 'train_loss': 0.18251830247556725, 'learning_rate': 0.0, 'epoch': 5.0}
+[I 2022-07-15 19:53:37,443] Trial 2 finished with value: 0.18251830247556725 and parameters: {'learning_rate': 1.580889749353924e-05, 'weight_decay': 0.00038842130352761376, 'per_device_train_batch_size': 8}. Best is trial 2 with value: 0.18251830247556725.
+{'eval_loss': 0.5533663034439087, 'eval_maf': 0.7801065162907268, 'eval_map': 0.9449013157894737, 'eval_mar': 0.6954545454545454, 'eval_mif': 0.87, 'eval_mip': 0.87, 'eval_mir': 0.87, 'eval_avgf': 0.8604937343358395, 'eval_avgp': 0.8851973684210526, 'eval_avgr': 0.87, 'eval_mse': 0.34, 'eval_runtime': 0.8403, 'eval_samples_per_second': 119.002, 'eval_steps_per_second': 15.47, 'learning_rate': 0.0, 'epoch': 5.0}
+loading configuration file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/034fd09e9530137fb6e6c042529972a92619fb02df8b40e7a4cfc50090943c46.98e658c5b8878c67807e3287b07db9608dbd08a5b69ce09979c447190bbe8077
+Model config RobertaConfig {
+  "_name_or_path": "pysentimiento/robertuito-sentiment-analysis",
+  "architectures": [
+    "RobertaForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 130,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 30002
+}
+
+loading weights file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/46eaf2275c70a984feed87be9019d2c427e10e13e4498d391bedffc0c61b4991.01d3c05bd9b3f5c750a6a897fc7bc380ac6c30347fa348718ca5ed37b03fdd46
+All model checkpoint weights were used when initializing RobertaForSequenceClassification.
+
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at pysentimiento/robertuito-sentiment-analysis and are newly initialized because the shapes did not match:
+- classifier.out_proj.weight: found shape torch.Size([3, 768]) in the checkpoint and torch.Size([4, 768]) in the model instantiated
+- classifier.out_proj.bias: found shape torch.Size([3]) in the checkpoint and torch.Size([4]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using custom data configuration default-49918a3497c70add
+Reusing dataset csv (/root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+100%
+3/3 [00:00<00:00, 31.84it/s]
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/47dd2d3180a6186d30715516321375322e3a84d5e4656762e083091bbb5d5dc4.0843b07596b388e054bae078721182b4846b9e28a7bbf04d7079b274f8613ae3
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/special_tokens_map.json from cache at /root/.cache/huggingface/transformers/25e0e805456d2786a12b70b86278c6e839d19958cb4f541ee1f78621140098f7.0dc5b1041f62041ebbd23b1297f2f573769d5c97d8b7c28180ec86b8f6185aa8
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer_config.json from cache at /root/.cache/huggingface/transformers/4fdf9a5a8e0a6023e1a9cdef62921158c3db9545e73f8dc0f46340a21bbb64d5.50a2bcf7668df2ff5a82b7b0455533bb4c0db21e6e33565fa20fd7dc8a3be740
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+/usr/local/lib/python3.7/dist-packages/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+{'loss': 0.4437, 'learning_rate': 2.58808973394219e-05, 'epoch': 0.24}
+{'loss': 0.3723, 'learning_rate': 2.4579695864337845e-05, 'epoch': 0.48}
+{'loss': 0.3538, 'learning_rate': 2.3278494389253785e-05, 'epoch': 0.72}
+{'loss': 0.3371, 'learning_rate': 2.197729291416973e-05, 'epoch': 0.96}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/3/checkpoint-2089
+Configuration saved in ./testRobertaTwitter/3/checkpoint-2089/config.json
+{'eval_loss': 0.7570615410804749, 'eval_maf': 0.6628017469802459, 'eval_map': 0.8690476190476191, 'eval_mar': 0.5931818181818181, 'eval_mif': 0.78, 'eval_mip': 0.78, 'eval_mir': 0.78, 'eval_avgf': 0.7418028982329185, 'eval_avgp': 0.8019047619047619, 'eval_avgr': 0.78, 'eval_mse': 0.75, 'eval_runtime': 0.753, 'eval_samples_per_second': 132.803, 'eval_steps_per_second': 17.264, 'learning_rate': 2.174567905160477e-05, 'epoch': 1.0}
+Model weights saved in ./testRobertaTwitter/3/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/3/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/3/checkpoint-2089/special_tokens_map.json
+{'loss': 0.2543, 'learning_rate': 2.0676091439085673e-05, 'epoch': 1.2}
+{'loss': 0.2454, 'learning_rate': 1.9374889964001617e-05, 'epoch': 1.44}
+{'loss': 0.2336, 'learning_rate': 1.8073688488917558e-05, 'epoch': 1.68}
+{'loss': 0.2387, 'learning_rate': 1.6772487013833502e-05, 'epoch': 1.91}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/3/checkpoint-4178
+Configuration saved in ./testRobertaTwitter/3/checkpoint-4178/config.json
+{'eval_loss': 0.5120368003845215, 'eval_maf': 0.751177536231884, 'eval_map': 0.8933933933933934, 'eval_mar': 0.6779119318181819, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8495144927536231, 'eval_avgp': 0.8637537537537537, 'eval_avgr': 0.86, 'eval_mse': 0.4, 'eval_runtime': 0.7508, 'eval_samples_per_second': 133.186, 'eval_steps_per_second': 17.314, 'learning_rate': 1.6309259288703575e-05, 'epoch': 2.0}
+Model weights saved in ./testRobertaTwitter/3/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/3/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/3/checkpoint-4178/special_tokens_map.json
+{'loss': 0.1387, 'learning_rate': 1.5471285538749442e-05, 'epoch': 2.15}
+{'loss': 0.1218, 'learning_rate': 1.4170084063665385e-05, 'epoch': 2.39}
+{'loss': 0.1355, 'learning_rate': 1.2868882588581329e-05, 'epoch': 2.63}
+{'loss': 0.1378, 'learning_rate': 1.156768111349727e-05, 'epoch': 2.87}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/3/checkpoint-6267
+Configuration saved in ./testRobertaTwitter/3/checkpoint-6267/config.json
+{'eval_loss': 0.6224915981292725, 'eval_maf': 0.7843672430476671, 'eval_map': 0.9143650793650794, 'eval_mar': 0.7188210227272727, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8499099667634313, 'eval_avgp': 0.8707746031746032, 'eval_avgr': 0.86, 'eval_mse': 0.41, 'eval_runtime': 0.755, 'eval_samples_per_second': 132.449, 'eval_steps_per_second': 17.218, 'learning_rate': 1.0872839525802385e-05, 'epoch': 3.0}
+Model weights saved in ./testRobertaTwitter/3/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/3/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/3/checkpoint-6267/special_tokens_map.json
+{'loss': 0.0937, 'learning_rate': 1.0266479638413213e-05, 'epoch': 3.11}
+{'loss': 0.0596, 'learning_rate': 8.965278163329155e-06, 'epoch': 3.35}
+{'loss': 0.0585, 'learning_rate': 7.6640766882451e-06, 'epoch': 3.59}
+{'loss': 0.0638, 'learning_rate': 6.362875213161041e-06, 'epoch': 3.83}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/3/checkpoint-8356
+Configuration saved in ./testRobertaTwitter/3/checkpoint-8356/config.json
+{'eval_loss': 1.3054713010787964, 'eval_maf': 0.7363968122460252, 'eval_map': 0.896978021978022, 'eval_mar': 0.6574573863636364, 'eval_mif': 0.83, 'eval_mip': 0.83, 'eval_mir': 0.83, 'eval_avgf': 0.8159993687615892, 'eval_avgp': 0.8457142857142856, 'eval_avgr': 0.83, 'eval_mse': 0.47, 'eval_runtime': 0.7547, 'eval_samples_per_second': 132.499, 'eval_steps_per_second': 17.225, 'learning_rate': 5.436419762901193e-06, 'epoch': 4.0}
+Model weights saved in ./testRobertaTwitter/3/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/3/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/3/checkpoint-8356/special_tokens_map.json
+{'loss': 0.0423, 'learning_rate': 5.061673738076983e-06, 'epoch': 4.07}
+{'loss': 0.0299, 'learning_rate': 3.760472262992926e-06, 'epoch': 4.31}
+{'loss': 0.0296, 'learning_rate': 2.459270787908869e-06, 'epoch': 4.55}
+{'loss': 0.0283, 'learning_rate': 1.1580693128248113e-06, 'epoch': 4.79}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/3/checkpoint-10445
+Configuration saved in ./testRobertaTwitter/3/checkpoint-10445/config.json
+{'eval_loss': 1.0952662229537964, 'eval_maf': 0.7666666666666666, 'eval_map': 0.9081296992481203, 'eval_mar': 0.6938210227272728, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8393333333333334, 'eval_avgp': 0.862312030075188, 'eval_avgr': 0.85, 'eval_mse': 0.42, 'eval_runtime': 0.753, 'eval_samples_per_second': 132.796, 'eval_steps_per_second': 17.263, 'learning_rate': 0.0, 'epoch': 5.0}
+Model weights saved in ./testRobertaTwitter/3/checkpoint-10445/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/3/checkpoint-10445/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/3/checkpoint-10445/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testRobertaTwitter/3/checkpoint-4178 (score: 0.5120368003845215).
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+{'train_runtime': 2206.3799, 'train_samples_per_second': 37.867, 'train_steps_per_second': 4.734, 'train_loss': 0.1648401243941187, 'learning_rate': 0.0, 'epoch': 5.0}
+[I 2022-07-15 20:30:30,658] Trial 3 finished with value: 0.1648401243941187 and parameters: {'learning_rate': 2.718209881450596e-05, 'weight_decay': 0.001273019903670582, 'per_device_train_batch_size': 8}. Best is trial 3 with value: 0.1648401243941187.
+{'eval_loss': 0.5120368003845215, 'eval_maf': 0.751177536231884, 'eval_map': 0.8933933933933934, 'eval_mar': 0.6779119318181819, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8495144927536231, 'eval_avgp': 0.8637537537537537, 'eval_avgr': 0.86, 'eval_mse': 0.4, 'eval_runtime': 0.8183, 'eval_samples_per_second': 122.203, 'eval_steps_per_second': 15.886, 'learning_rate': 0.0, 'epoch': 5.0}
+loading configuration file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/034fd09e9530137fb6e6c042529972a92619fb02df8b40e7a4cfc50090943c46.98e658c5b8878c67807e3287b07db9608dbd08a5b69ce09979c447190bbe8077
+Model config RobertaConfig {
+  "_name_or_path": "pysentimiento/robertuito-sentiment-analysis",
+  "architectures": [
+    "RobertaForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 130,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 30002
+}
+
+loading weights file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/46eaf2275c70a984feed87be9019d2c427e10e13e4498d391bedffc0c61b4991.01d3c05bd9b3f5c750a6a897fc7bc380ac6c30347fa348718ca5ed37b03fdd46
+All model checkpoint weights were used when initializing RobertaForSequenceClassification.
+
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at pysentimiento/robertuito-sentiment-analysis and are newly initialized because the shapes did not match:
+- classifier.out_proj.weight: found shape torch.Size([3, 768]) in the checkpoint and torch.Size([4, 768]) in the model instantiated
+- classifier.out_proj.bias: found shape torch.Size([3]) in the checkpoint and torch.Size([4]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using custom data configuration default-49918a3497c70add
+Reusing dataset csv (/root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+100%
+3/3 [00:00<00:00, 8.98it/s]
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/47dd2d3180a6186d30715516321375322e3a84d5e4656762e083091bbb5d5dc4.0843b07596b388e054bae078721182b4846b9e28a7bbf04d7079b274f8613ae3
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/special_tokens_map.json from cache at /root/.cache/huggingface/transformers/25e0e805456d2786a12b70b86278c6e839d19958cb4f541ee1f78621140098f7.0dc5b1041f62041ebbd23b1297f2f573769d5c97d8b7c28180ec86b8f6185aa8
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer_config.json from cache at /root/.cache/huggingface/transformers/4fdf9a5a8e0a6023e1a9cdef62921158c3db9545e73f8dc0f46340a21bbb64d5.50a2bcf7668df2ff5a82b7b0455533bb4c0db21e6e33565fa20fd7dc8a3be740
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+/usr/local/lib/python3.7/dist-packages/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 16
+  Total train batch size (w. parallel, distributed & accumulation) = 16
+  Gradient Accumulation steps = 1
+  Total optimization steps = 5225
+{'loss': 0.8557, 'learning_rate': 7.162426988214394e-07, 'epoch': 0.48}
+{'loss': 0.5452, 'learning_rate': 6.404498206392765e-07, 'epoch': 0.96}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaTwitter/4/checkpoint-1045
+Configuration saved in ./testRobertaTwitter/4/checkpoint-1045/config.json
+{'eval_loss': 0.8742939233779907, 'eval_maf': 0.28267045454545453, 'eval_map': 0.3, 'eval_mar': 0.3029119318181818, 'eval_mif': 0.68, 'eval_mip': 0.68, 'eval_mir': 0.68, 'eval_avgf': 0.5923863636363635, 'eval_avgp': 0.5579999999999999, 'eval_avgr': 0.68, 'eval_mse': 1.02, 'eval_runtime': 0.6874, 'eval_samples_per_second': 145.471, 'eval_steps_per_second': 10.183, 'learning_rate': 6.33628461602882e-07, 'epoch': 1.0}
+Model weights saved in ./testRobertaTwitter/4/checkpoint-1045/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/4/checkpoint-1045/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/4/checkpoint-1045/special_tokens_map.json
+{'loss': 0.4969, 'learning_rate': 5.646569424571137e-07, 'epoch': 1.44}
+{'loss': 0.4705, 'learning_rate': 4.888640642749508e-07, 'epoch': 1.91}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaTwitter/4/checkpoint-2090
+Configuration saved in ./testRobertaTwitter/4/checkpoint-2090/config.json
+{'eval_loss': 0.8155079483985901, 'eval_maf': 0.30264828586976233, 'eval_map': 0.29901960784313725, 'eval_mar': 0.32173295454545453, 'eval_mif': 0.69, 'eval_mip': 0.69, 'eval_mir': 0.69, 'eval_avgf': 0.6158606929076726, 'eval_avgp': 0.5694901960784313, 'eval_avgr': 0.69, 'eval_mse': 1.14, 'eval_runtime': 0.6819, 'eval_samples_per_second': 146.657, 'eval_steps_per_second': 10.266, 'learning_rate': 4.752213462021614e-07, 'epoch': 2.0}
+Model weights saved in ./testRobertaTwitter/4/checkpoint-2090/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/4/checkpoint-2090/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/4/checkpoint-2090/special_tokens_map.json
+{'loss': 0.4388, 'learning_rate': 4.1307118609278785e-07, 'epoch': 2.39}
+{'loss': 0.4328, 'learning_rate': 3.3727830791062496e-07, 'epoch': 2.87}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaTwitter/4/checkpoint-3135
+Configuration saved in ./testRobertaTwitter/4/checkpoint-3135/config.json
+{'eval_loss': 0.7867306470870972, 'eval_maf': 0.32626896912611203, 'eval_map': 0.3190999291282778, 'eval_mar': 0.3444602272727273, 'eval_mif': 0.7100000000000001, 'eval_mip': 0.71, 'eval_mir': 0.71, 'eval_avgf': 0.6414024071166929, 'eval_avgp': 0.5945428773919206, 'eval_avgr': 0.71, 'eval_mse': 1.06, 'eval_runtime': 0.6842, 'eval_samples_per_second': 146.161, 'eval_steps_per_second': 10.231, 'learning_rate': 3.16814230801441e-07, 'epoch': 3.0}
+Model weights saved in ./testRobertaTwitter/4/checkpoint-3135/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/4/checkpoint-3135/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/4/checkpoint-3135/special_tokens_map.json
+{'loss': 0.4177, 'learning_rate': 2.6148542972846203e-07, 'epoch': 3.35}
+{'loss': 0.413, 'learning_rate': 1.8569255154629912e-07, 'epoch': 3.83}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaTwitter/4/checkpoint-4180
+Configuration saved in ./testRobertaTwitter/4/checkpoint-4180/config.json
+{'eval_loss': 0.7588084936141968, 'eval_maf': 0.4140831530882, 'eval_map': 0.5796493902439024, 'eval_mar': 0.3944602272727273, 'eval_mif': 0.7299999999999999, 'eval_mip': 0.73, 'eval_mir': 0.73, 'eval_avgf': 0.6811055034847392, 'eval_avgp': 0.7076524390243902, 'eval_avgr': 0.73, 'eval_mse': 0.96, 'eval_runtime': 0.6859, 'eval_samples_per_second': 145.791, 'eval_steps_per_second': 10.205, 'learning_rate': 1.584071154007205e-07, 'epoch': 4.0}
+Model weights saved in ./testRobertaTwitter/4/checkpoint-4180/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/4/checkpoint-4180/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/4/checkpoint-4180/special_tokens_map.json
+{'loss': 0.4032, 'learning_rate': 1.0989967336413622e-07, 'epoch': 4.31}
+{'loss': 0.397, 'learning_rate': 3.410679518197331e-08, 'epoch': 4.78}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaTwitter/4/checkpoint-5225
+Configuration saved in ./testRobertaTwitter/4/checkpoint-5225/config.json
+{'eval_loss': 0.7584832906723022, 'eval_maf': 0.4140831530882, 'eval_map': 0.5796493902439024, 'eval_mar': 0.3944602272727273, 'eval_mif': 0.7299999999999999, 'eval_mip': 0.73, 'eval_mir': 0.73, 'eval_avgf': 0.6811055034847392, 'eval_avgp': 0.7076524390243902, 'eval_avgr': 0.73, 'eval_mse': 0.96, 'eval_runtime': 0.7031, 'eval_samples_per_second': 142.224, 'eval_steps_per_second': 9.956, 'learning_rate': 0.0, 'epoch': 5.0}
+Model weights saved in ./testRobertaTwitter/4/checkpoint-5225/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/4/checkpoint-5225/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/4/checkpoint-5225/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testRobertaTwitter/4/checkpoint-5225 (score: 0.7584832906723022).
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 16
+{'train_runtime': 1833.6952, 'train_samples_per_second': 45.564, 'train_steps_per_second': 2.849, 'train_loss': 0.48289778567957536, 'learning_rate': 0.0, 'epoch': 5.0}
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.7/dist-packages/sklearn/metrics/_classification.py:1318: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2022-07-15 21:01:11,351] Trial 4 finished with value: 0.48289778567957536 and parameters: {'learning_rate': 7.920355770036024e-07, 'weight_decay': 0.0019578908472881245, 'per_device_train_batch_size': 16}. Best is trial 3 with value: 0.1648401243941187.
+{'eval_loss': 0.7584832906723022, 'eval_maf': 0.4140831530882, 'eval_map': 0.5796493902439024, 'eval_mar': 0.3944602272727273, 'eval_mif': 0.7299999999999999, 'eval_mip': 0.73, 'eval_mir': 0.73, 'eval_avgf': 0.6811055034847392, 'eval_avgp': 0.7076524390243902, 'eval_avgr': 0.73, 'eval_mse': 0.96, 'eval_runtime': 0.7363, 'eval_samples_per_second': 135.822, 'eval_steps_per_second': 9.508, 'learning_rate': 0.0, 'epoch': 5.0}
+loading configuration file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/034fd09e9530137fb6e6c042529972a92619fb02df8b40e7a4cfc50090943c46.98e658c5b8878c67807e3287b07db9608dbd08a5b69ce09979c447190bbe8077
+Model config RobertaConfig {
+  "_name_or_path": "pysentimiento/robertuito-sentiment-analysis",
+  "architectures": [
+    "RobertaForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 130,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 30002
+}
+
+loading weights file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/46eaf2275c70a984feed87be9019d2c427e10e13e4498d391bedffc0c61b4991.01d3c05bd9b3f5c750a6a897fc7bc380ac6c30347fa348718ca5ed37b03fdd46
+All model checkpoint weights were used when initializing RobertaForSequenceClassification.
+
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at pysentimiento/robertuito-sentiment-analysis and are newly initialized because the shapes did not match:
+- classifier.out_proj.weight: found shape torch.Size([3, 768]) in the checkpoint and torch.Size([4, 768]) in the model instantiated
+- classifier.out_proj.bias: found shape torch.Size([3]) in the checkpoint and torch.Size([4]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using custom data configuration default-49918a3497c70add
+Reusing dataset csv (/root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+100%
+3/3 [00:00<00:00, 31.50it/s]
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/47dd2d3180a6186d30715516321375322e3a84d5e4656762e083091bbb5d5dc4.0843b07596b388e054bae078721182b4846b9e28a7bbf04d7079b274f8613ae3
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/special_tokens_map.json from cache at /root/.cache/huggingface/transformers/25e0e805456d2786a12b70b86278c6e839d19958cb4f541ee1f78621140098f7.0dc5b1041f62041ebbd23b1297f2f573769d5c97d8b7c28180ec86b8f6185aa8
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer_config.json from cache at /root/.cache/huggingface/transformers/4fdf9a5a8e0a6023e1a9cdef62921158c3db9545e73f8dc0f46340a21bbb64d5.50a2bcf7668df2ff5a82b7b0455533bb4c0db21e6e33565fa20fd7dc8a3be740
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+/usr/local/lib/python3.7/dist-packages/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 32
+  Total train batch size (w. parallel, distributed & accumulation) = 32
+  Gradient Accumulation steps = 1
+  Total optimization steps = 2615
+{'loss': 0.3417, 'learning_rate': 2.6134070017727006e-05, 'epoch': 0.96}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+Saving model checkpoint to ./testRobertaTwitter/5/checkpoint-523
+Configuration saved in ./testRobertaTwitter/5/checkpoint-523/config.json
+{'eval_loss': 0.48538362979888916, 'eval_maf': 0.7800549297733277, 'eval_map': 0.939935064935065, 'eval_mar': 0.6977272727272728, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8489014045334445, 'eval_avgp': 0.8762337662337663, 'eval_avgr': 0.86, 'eval_mse': 0.41, 'eval_runtime': 0.6819, 'eval_samples_per_second': 146.649, 'eval_steps_per_second': 5.866, 'learning_rate': 2.5849869729118155e-05, 'epoch': 1.0}
+Model weights saved in ./testRobertaTwitter/5/checkpoint-523/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/5/checkpoint-523/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/5/checkpoint-523/special_tokens_map.json
+{'loss': 0.1995, 'learning_rate': 1.9955802874056315e-05, 'epoch': 1.91}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+Saving model checkpoint to ./testRobertaTwitter/5/checkpoint-1046
+Configuration saved in ./testRobertaTwitter/5/checkpoint-1046/config.json
+{'eval_loss': 0.46169692277908325, 'eval_maf': 0.7633771929824561, 'eval_map': 0.9259868421052632, 'eval_mar': 0.6801846590909091, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8397719298245615, 'eval_avgp': 0.8630263157894738, 'eval_avgr': 0.85, 'eval_mse': 0.42, 'eval_runtime': 0.6985, 'eval_samples_per_second': 143.157, 'eval_steps_per_second': 5.726, 'learning_rate': 1.9387402296838613e-05, 'epoch': 2.0}
+Model weights saved in ./testRobertaTwitter/5/checkpoint-1046/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/5/checkpoint-1046/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/5/checkpoint-1046/special_tokens_map.json
+{'loss': 0.1075, 'learning_rate': 1.377753573038563e-05, 'epoch': 2.87}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+Saving model checkpoint to ./testRobertaTwitter/5/checkpoint-1569
+Configuration saved in ./testRobertaTwitter/5/checkpoint-1569/config.json
+{'eval_loss': 0.5909931063652039, 'eval_maf': 0.7532465976614913, 'eval_map': 0.9212121212121213, 'eval_mar': 0.6688210227272727, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8281761548782824, 'eval_avgp': 0.8543030303030303, 'eval_avgr': 0.84, 'eval_mse': 0.46, 'eval_runtime': 0.6809, 'eval_samples_per_second': 146.864, 'eval_steps_per_second': 5.875, 'learning_rate': 1.2924934864559077e-05, 'epoch': 3.0}
+Model weights saved in ./testRobertaTwitter/5/checkpoint-1569/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/5/checkpoint-1569/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/5/checkpoint-1569/special_tokens_map.json
+{'loss': 0.0555, 'learning_rate': 7.599268586714944e-06, 'epoch': 3.82}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+Saving model checkpoint to ./testRobertaTwitter/5/checkpoint-2092
+Configuration saved in ./testRobertaTwitter/5/checkpoint-2092/config.json
+{'eval_loss': 0.8051907420158386, 'eval_maf': 0.7458749583749583, 'eval_map': 0.9301363193768257, 'eval_mar': 0.6574573863636364, 'eval_mif': 0.83, 'eval_mip': 0.83, 'eval_mir': 0.83, 'eval_avgf': 0.8164398934398934, 'eval_avgp': 0.8534566699123661, 'eval_avgr': 0.83, 'eval_mse': 0.5, 'eval_runtime': 0.6812, 'eval_samples_per_second': 146.8, 'eval_steps_per_second': 5.872, 'learning_rate': 6.462467432279539e-06, 'epoch': 4.0}
+Model weights saved in ./testRobertaTwitter/5/checkpoint-2092/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/5/checkpoint-2092/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/5/checkpoint-2092/special_tokens_map.json
+{'loss': 0.0294, 'learning_rate': 1.4210014430442578e-06, 'epoch': 4.78}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+Saving model checkpoint to ./testRobertaTwitter/5/checkpoint-2615
+Configuration saved in ./testRobertaTwitter/5/checkpoint-2615/config.json
+{'eval_loss': 0.9859840869903564, 'eval_maf': 0.7346813725490196, 'eval_map': 0.9260416666666667, 'eval_mar': 0.64609375, 'eval_mif': 0.82, 'eval_mip': 0.82, 'eval_mir': 0.82, 'eval_avgf': 0.8040196078431372, 'eval_avgp': 0.8456666666666667, 'eval_avgr': 0.82, 'eval_mse': 0.54, 'eval_runtime': 0.6816, 'eval_samples_per_second': 146.705, 'eval_steps_per_second': 5.868, 'learning_rate': 0.0, 'epoch': 5.0}
+Model weights saved in ./testRobertaTwitter/5/checkpoint-2615/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/5/checkpoint-2615/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/5/checkpoint-2615/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testRobertaTwitter/5/checkpoint-1046 (score: 0.46169692277908325).
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+{'train_runtime': 1734.6112, 'train_samples_per_second': 48.166, 'train_steps_per_second': 1.508, 'train_loss': 0.14139758004285183, 'learning_rate': 0.0, 'epoch': 5.0}
+[I 2022-07-15 21:30:12,831] Trial 5 finished with value: 0.14139758004285183 and parameters: {'learning_rate': 3.231233716139769e-05, 'weight_decay': 0.006782016424804542, 'per_device_train_batch_size': 32}. Best is trial 5 with value: 0.14139758004285183.
+{'eval_loss': 0.46169692277908325, 'eval_maf': 0.7633771929824561, 'eval_map': 0.9259868421052632, 'eval_mar': 0.6801846590909091, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8397719298245615, 'eval_avgp': 0.8630263157894738, 'eval_avgr': 0.85, 'eval_mse': 0.42, 'eval_runtime': 0.7595, 'eval_samples_per_second': 131.668, 'eval_steps_per_second': 5.267, 'learning_rate': 0.0, 'epoch': 5.0}
+loading configuration file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/config.json from cache at /root/.cache/huggingface/transformers/034fd09e9530137fb6e6c042529972a92619fb02df8b40e7a4cfc50090943c46.98e658c5b8878c67807e3287b07db9608dbd08a5b69ce09979c447190bbe8077
+Model config RobertaConfig {
+  "_name_or_path": "pysentimiento/robertuito-sentiment-analysis",
+  "architectures": [
+    "RobertaForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 130,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "problem_type": "single_label_classification",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 30002
+}
+
+loading weights file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/pytorch_model.bin from cache at /root/.cache/huggingface/transformers/46eaf2275c70a984feed87be9019d2c427e10e13e4498d391bedffc0c61b4991.01d3c05bd9b3f5c750a6a897fc7bc380ac6c30347fa348718ca5ed37b03fdd46
+All model checkpoint weights were used when initializing RobertaForSequenceClassification.
+
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at pysentimiento/robertuito-sentiment-analysis and are newly initialized because the shapes did not match:
+- classifier.out_proj.weight: found shape torch.Size([3, 768]) in the checkpoint and torch.Size([4, 768]) in the model instantiated
+- classifier.out_proj.bias: found shape torch.Size([3]) in the checkpoint and torch.Size([4]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Using custom data configuration default-49918a3497c70add
+Reusing dataset csv (/root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+100%
+3/3 [00:00<00:00, 34.52it/s]
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer.json from cache at /root/.cache/huggingface/transformers/47dd2d3180a6186d30715516321375322e3a84d5e4656762e083091bbb5d5dc4.0843b07596b388e054bae078721182b4846b9e28a7bbf04d7079b274f8613ae3
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/added_tokens.json from cache at None
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/special_tokens_map.json from cache at /root/.cache/huggingface/transformers/25e0e805456d2786a12b70b86278c6e839d19958cb4f541ee1f78621140098f7.0dc5b1041f62041ebbd23b1297f2f573769d5c97d8b7c28180ec86b8f6185aa8
+loading file https://huggingface.co/pysentimiento/robertuito-sentiment-analysis/resolve/main/tokenizer_config.json from cache at /root/.cache/huggingface/transformers/4fdf9a5a8e0a6023e1a9cdef62921158c3db9545e73f8dc0f46340a21bbb64d5.50a2bcf7668df2ff5a82b7b0455533bb4c0db21e6e33565fa20fd7dc8a3be740
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /root/.cache/huggingface/datasets/csv/default-49918a3497c70add/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+/usr/local/lib/python3.7/dist-packages/transformers/optimization.py:310: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+{'loss': 0.4354, 'learning_rate': 3.799614903313649e-05, 'epoch': 0.24}
+{'loss': 0.3752, 'learning_rate': 3.608583485349162e-05, 'epoch': 0.48}
+{'loss': 0.3631, 'learning_rate': 3.417552067384675e-05, 'epoch': 0.72}
+{'loss': 0.3276, 'learning_rate': 3.2265206494201875e-05, 'epoch': 0.96}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/6/checkpoint-2089
+Configuration saved in ./testRobertaTwitter/6/checkpoint-2089/config.json
+{'eval_loss': 0.8515088558197021, 'eval_maf': 0.7547398343838833, 'eval_map': 0.9475308641975309, 'eval_mar': 0.6772727272727272, 'eval_mif': 0.83, 'eval_mip': 0.83, 'eval_mir': 0.83, 'eval_avgf': 0.8082630082808058, 'eval_avgp': 0.865679012345679, 'eval_avgr': 0.83, 'eval_mse': 0.56, 'eval_runtime': 0.7538, 'eval_samples_per_second': 132.665, 'eval_steps_per_second': 17.246, 'learning_rate': 3.1925170570225096e-05, 'epoch': 1.0}
+Model weights saved in ./testRobertaTwitter/6/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/6/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/6/checkpoint-2089/special_tokens_map.json
+{'loss': 0.2428, 'learning_rate': 3.035489231455701e-05, 'epoch': 1.2}
+{'loss': 0.2323, 'learning_rate': 2.8444578134912137e-05, 'epoch': 1.44}
+{'loss': 0.211, 'learning_rate': 2.6534263955267264e-05, 'epoch': 1.68}
+{'loss': 0.2155, 'learning_rate': 2.4623949775622392e-05, 'epoch': 1.91}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/6/checkpoint-4178
+Configuration saved in ./testRobertaTwitter/6/checkpoint-4178/config.json
+{'eval_loss': 0.5377869606018066, 'eval_maf': 0.7671243809905637, 'eval_map': 0.9086607142857143, 'eval_mar': 0.6915482954545454, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8510829973791866, 'eval_avgp': 0.8695642857142856, 'eval_avgr': 0.86, 'eval_mse': 0.35, 'eval_runtime': 0.7558, 'eval_samples_per_second': 132.305, 'eval_steps_per_second': 17.2, 'learning_rate': 2.3943877927668817e-05, 'epoch': 2.0}
+Model weights saved in ./testRobertaTwitter/6/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/6/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/6/checkpoint-4178/special_tokens_map.json
+{'loss': 0.1308, 'learning_rate': 2.2713635595977523e-05, 'epoch': 2.15}
+{'loss': 0.071, 'learning_rate': 2.080332141633265e-05, 'epoch': 2.39}
+{'loss': 0.1039, 'learning_rate': 1.8893007236687778e-05, 'epoch': 2.63}
+{'loss': 0.1087, 'learning_rate': 1.698269305704291e-05, 'epoch': 2.87}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/6/checkpoint-6267
+Configuration saved in ./testRobertaTwitter/6/checkpoint-6267/config.json
+{'eval_loss': 0.9019672274589539, 'eval_maf': 0.744162564685094, 'eval_map': 0.8687301587301587, 'eval_mar': 0.6824573863636363, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8271614287517355, 'eval_avgp': 0.8439492063492062, 'eval_avgr': 0.84, 'eval_mse': 0.57, 'eval_runtime': 0.7582, 'eval_samples_per_second': 131.887, 'eval_steps_per_second': 17.145, 'learning_rate': 1.5962585285112548e-05, 'epoch': 3.0}
+Model weights saved in ./testRobertaTwitter/6/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/6/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/6/checkpoint-6267/special_tokens_map.json
+{'loss': 0.075, 'learning_rate': 1.5072378877398035e-05, 'epoch': 3.11}
+{'loss': 0.0426, 'learning_rate': 1.3162064697753164e-05, 'epoch': 3.35}
+{'loss': 0.0348, 'learning_rate': 1.1251750518108293e-05, 'epoch': 3.59}
+{'loss': 0.0354, 'learning_rate': 9.341436338463422e-06, 'epoch': 3.83}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/6/checkpoint-8356
+Configuration saved in ./testRobertaTwitter/6/checkpoint-8356/config.json
+{'eval_loss': 1.2142831087112427, 'eval_maf': 0.7626199415936585, 'eval_map': 0.9188311688311689, 'eval_mar': 0.6824573863636363, 'eval_mif': 0.8399999999999999, 'eval_mip': 0.84, 'eval_mir': 0.84, 'eval_avgf': 0.8276011681268252, 'eval_avgp': 0.8522077922077922, 'eval_avgr': 0.84, 'eval_mse': 0.49, 'eval_runtime': 0.7812, 'eval_samples_per_second': 128.002, 'eval_steps_per_second': 16.64, 'learning_rate': 7.981292642556274e-06, 'epoch': 4.0}
+Model weights saved in ./testRobertaTwitter/6/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/6/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/6/checkpoint-8356/special_tokens_map.json
+{'loss': 0.0234, 'learning_rate': 7.43112215881855e-06, 'epoch': 4.07}
+{'loss': 0.0191, 'learning_rate': 5.520807979173679e-06, 'epoch': 4.31}
+{'loss': 0.0103, 'learning_rate': 3.6104937995288074e-06, 'epoch': 4.55}
+{'loss': 0.0221, 'learning_rate': 1.7001796198839358e-06, 'epoch': 4.79}
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaTwitter/6/checkpoint-10445
+Configuration saved in ./testRobertaTwitter/6/checkpoint-10445/config.json
+{'eval_loss': 1.2530652284622192, 'eval_maf': 0.7580514535739828, 'eval_map': 0.8865873015873016, 'eval_mar': 0.6938210227272728, 'eval_mif': 0.85, 'eval_mip': 0.85, 'eval_mir': 0.85, 'eval_avgf': 0.8393836509739576, 'eval_avgp': 0.859663492063492, 'eval_avgr': 0.85, 'eval_mse': 0.47, 'eval_runtime': 0.7705, 'eval_samples_per_second': 129.788, 'eval_steps_per_second': 16.873, 'learning_rate': 0.0, 'epoch': 5.0}
+Model weights saved in ./testRobertaTwitter/6/checkpoint-10445/pytorch_model.bin
+tokenizer config file saved in ./testRobertaTwitter/6/checkpoint-10445/tokenizer_config.json
+Special tokens file saved in ./testRobertaTwitter/6/checkpoint-10445/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testRobertaTwitter/6/checkpoint-4178 (score: 0.5377869606018066).
+The following columns in the evaluation set don't have a corresponding argument in `RobertaForSequenceClassification.forward` and have been ignored: comment, media, influencer_gender, influencer, comment_id. If comment, media, influencer_gender, influencer, comment_id are not expected by `RobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+{'train_runtime': 2212.7611, 'train_samples_per_second': 37.758, 'train_steps_per_second': 4.72, 'train_loss': 0.14796702324231314, 'learning_rate': 0.0, 'epoch': 5.0}
+[I 2022-07-15 22:07:12,492] Trial 6 finished with value: 0.14796702324231314 and parameters: {'learning_rate': 3.9906463212781365e-05, 'weight_decay': 7.182245557826593e-05, 'per_device_train_batch_size': 8}. Best is trial 5 with value: 0.14139758004285183.
+{'eval_loss': 0.5377869606018066, 'eval_maf': 0.7671243809905637, 'eval_map': 0.9086607142857143, 'eval_mar': 0.6915482954545454, 'eval_mif': 0.8599999999999999, 'eval_mip': 0.86, 'eval_mir': 0.86, 'eval_avgf': 0.8510829973791866, 'eval_avgp': 0.8695642857142856, 'eval_avgr': 0.86, 'eval_mse': 0.35, 'eval_runtime': 0.797, 'eval_samples_per_second': 125.472, 'eval_steps_per_second': 16.311, 'learning_rate': 0.0, 'epoch': 5.0}

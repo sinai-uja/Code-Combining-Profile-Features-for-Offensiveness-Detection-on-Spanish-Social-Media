@@ -1,0 +1,624 @@
+[32m[I 2022-07-20 09:21:06,678][0m A new study created in memory with name: hyper-parameter-search[0m
+Using custom data configuration default-a1a1013d5c9373f1
+Reusing dataset csv (/mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 3/3 [00:00<00:00, 84.86it/s]
+Parameter 'function'=<function Pruebas.preprocess_text at 0x7f70e3e82160> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+
+  0%|          | 0/17 [00:00<?, ?ba/s]
+  6%|â–Œ         | 1/17 [00:00<00:07,  2.03ba/s]
+ 12%|â–ˆâ–        | 2/17 [00:00<00:06,  2.39ba/s]
+ 18%|â–ˆâ–Š        | 3/17 [00:01<00:05,  2.52ba/s]
+ 24%|â–ˆâ–ˆâ–Ž       | 4/17 [00:01<00:05,  2.36ba/s]
+ 29%|â–ˆâ–ˆâ–‰       | 5/17 [00:02<00:04,  2.44ba/s]
+ 35%|â–ˆâ–ˆâ–ˆâ–Œ      | 6/17 [00:02<00:04,  2.47ba/s]
+ 41%|â–ˆâ–ˆâ–ˆâ–ˆ      | 7/17 [00:02<00:03,  2.54ba/s]
+ 47%|â–ˆâ–ˆâ–ˆâ–ˆâ–‹     | 8/17 [00:03<00:03,  2.58ba/s]
+ 53%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–Ž    | 9/17 [00:03<00:03,  2.51ba/s]
+ 59%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‰    | 10/17 [00:04<00:02,  2.50ba/s]
+ 65%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–   | 11/17 [00:04<00:02,  2.52ba/s]
+ 71%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ   | 12/17 [00:04<00:02,  2.34ba/s]
+ 76%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‹  | 13/17 [00:05<00:01,  2.47ba/s]
+ 82%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ– | 14/17 [00:05<00:01,  2.61ba/s]
+ 88%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–Š | 15/17 [00:05<00:00,  2.64ba/s]
+ 94%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–| 16/17 [00:06<00:00,  2.78ba/s]
+100%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 17/17 [00:06<00:00,  3.10ba/s]
+100%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 17/17 [00:06<00:00,  2.60ba/s]
+
+  0%|          | 0/14 [00:00<?, ?ba/s]
+  7%|â–‹         | 1/14 [00:00<00:05,  2.54ba/s]
+ 14%|â–ˆâ–        | 2/14 [00:00<00:04,  2.43ba/s]
+ 21%|â–ˆâ–ˆâ–       | 3/14 [00:01<00:04,  2.52ba/s]
+ 29%|â–ˆâ–ˆâ–Š       | 4/14 [00:01<00:03,  2.61ba/s]
+ 36%|â–ˆâ–ˆâ–ˆâ–Œ      | 5/14 [00:01<00:03,  2.71ba/s]
+ 43%|â–ˆâ–ˆâ–ˆâ–ˆâ–Ž     | 6/14 [00:02<00:02,  2.76ba/s]
+ 50%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆ     | 7/14 [00:02<00:02,  2.79ba/s]
+ 57%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‹    | 8/14 [00:02<00:02,  2.76ba/s]
+ 64%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–   | 9/14 [00:03<00:01,  2.79ba/s]
+ 71%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–  | 10/14 [00:03<00:01,  2.79ba/s]
+ 79%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–Š  | 11/14 [00:04<00:01,  2.78ba/s]
+ 86%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–Œ | 12/14 [00:04<00:00,  2.77ba/s]
+ 93%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–Ž| 13/14 [00:04<00:00,  2.72ba/s]
+100%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 14/14 [00:05<00:00,  3.05ba/s]
+100%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 14/14 [00:05<00:00,  2.78ba/s]
+
+  0%|          | 0/1 [00:00<?, ?ba/s]
+100%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 1/1 [00:00<00:00, 16.58ba/s]
+The following columns in the training set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 5225
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaCardiff/0/checkpoint-1045
+Configuration saved in ./testRobertaCardiff/0/checkpoint-1045/config.json
+Model weights saved in ./testRobertaCardiff/0/checkpoint-1045/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/0/checkpoint-1045/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/0/checkpoint-1045/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaCardiff/0/checkpoint-2090
+Configuration saved in ./testRobertaCardiff/0/checkpoint-2090/config.json
+Model weights saved in ./testRobertaCardiff/0/checkpoint-2090/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/0/checkpoint-2090/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/0/checkpoint-2090/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaCardiff/0/checkpoint-3135
+Configuration saved in ./testRobertaCardiff/0/checkpoint-3135/config.json
+Model weights saved in ./testRobertaCardiff/0/checkpoint-3135/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/0/checkpoint-3135/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/0/checkpoint-3135/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaCardiff/0/checkpoint-4180
+Configuration saved in ./testRobertaCardiff/0/checkpoint-4180/config.json
+Model weights saved in ./testRobertaCardiff/0/checkpoint-4180/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/0/checkpoint-4180/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/0/checkpoint-4180/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+Saving model checkpoint to ./testRobertaCardiff/0/checkpoint-5225
+Configuration saved in ./testRobertaCardiff/0/checkpoint-5225/config.json
+Model weights saved in ./testRobertaCardiff/0/checkpoint-5225/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/0/checkpoint-5225/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/0/checkpoint-5225/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testRobertaCardiff/0/checkpoint-2090 (score: 0.5507552623748779).
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+[32m[I 2022-07-20 10:12:12,063][0m Trial 0 finished with value: 0.246350646680622 and parameters: {'learning_rate': 1.1112755858787506e-05, 'weight_decay': 0.003659026854955058, 'per_device_train_batch_size': 8}. Best is trial 0 with value: 0.246350646680622.[0m
+loading configuration file ./model6/config.json
+Model config XLMRobertaConfig {
+  "_name_or_path": "./model6/",
+  "architectures": [
+    "XLMRobertaForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+loading weights file ./model6/pytorch_model.bin
+All model checkpoint weights were used when initializing XLMRobertaForSequenceClassification.
+
+All the weights of XLMRobertaForSequenceClassification were initialized from the model checkpoint at ./model6/.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use XLMRobertaForSequenceClassification for predictions without further training.
+Using custom data configuration default-a1a1013d5c9373f1
+Reusing dataset csv (/mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+{'loss': 0.4573, 'learning_rate': 1.0049334245506405e-05, 'epoch': 0.48}
+{'loss': 0.3408, 'learning_rate': 8.985912632225305e-06, 'epoch': 0.96}
+{'eval_loss': 0.552333414554596, 'eval_maf': 0.658286484757073, 'eval_map': 0.873285864978903, 'eval_mar': 0.5933238636363636, 'eval_mif': 0.8000000000000002, 'eval_mip': 0.8, 'eval_mir': 0.8, 'eval_avgf': 0.7781545774486951, 'eval_avgp': 0.8131118143459914, 'eval_avgr': 0.8, 'eval_mse': 0.67, 'eval_runtime': 1.0748, 'eval_samples_per_second': 93.04, 'eval_steps_per_second': 6.513, 'learning_rate': 8.890204687030005e-06, 'epoch': 1.0}
+{'loss': 0.3013, 'learning_rate': 7.922491018944203e-06, 'epoch': 1.44}
+{'loss': 0.2732, 'learning_rate': 6.859069405663102e-06, 'epoch': 1.91}
+{'eval_loss': 0.5507552623748779, 'eval_maf': 0.6331724581724582, 'eval_map': 0.8214912280701755, 'eval_mar': 0.57578125, 'eval_mif': 0.79, 'eval_mip': 0.79, 'eval_mir': 0.79, 'eval_avgf': 0.7711917631917632, 'eval_avgp': 0.7900175438596492, 'eval_avgr': 0.79, 'eval_mse': 0.81, 'eval_runtime': 1.1049, 'eval_samples_per_second': 90.505, 'eval_steps_per_second': 6.335, 'learning_rate': 6.667653515272504e-06, 'epoch': 2.0}
+{'loss': 0.2212, 'learning_rate': 5.795647792382001e-06, 'epoch': 2.39}
+{'loss': 0.2247, 'learning_rate': 4.7322261791009e-06, 'epoch': 2.87}
+{'eval_loss': 0.59869384765625, 'eval_maf': 0.7039682539682539, 'eval_map': 0.8345864661654135, 'eval_mar': 0.63828125, 'eval_mif': 0.8000000000000002, 'eval_mip': 0.8, 'eval_mir': 0.8, 'eval_avgf': 0.7854920634920636, 'eval_avgp': 0.8015413533834587, 'eval_avgr': 0.8, 'eval_mse': 0.72, 'eval_runtime': 1.0752, 'eval_samples_per_second': 93.003, 'eval_steps_per_second': 6.51, 'learning_rate': 4.4451023435150025e-06, 'epoch': 3.0}
+{'loss': 0.2005, 'learning_rate': 3.6688045658197986e-06, 'epoch': 3.35}
+{'loss': 0.1759, 'learning_rate': 2.6053829525386978e-06, 'epoch': 3.83}
+{'eval_loss': 0.6794318556785583, 'eval_maf': 0.7014064424136366, 'eval_map': 0.8241666666666667, 'eval_mar': 0.63828125, 'eval_mif': 0.8000000000000002, 'eval_mip': 0.8, 'eval_mir': 0.8, 'eval_avgf': 0.7858707628491801, 'eval_avgp': 0.7968666666666667, 'eval_avgr': 0.8, 'eval_mse': 0.72, 'eval_runtime': 1.0728, 'eval_samples_per_second': 93.215, 'eval_steps_per_second': 6.525, 'learning_rate': 2.2225511717575013e-06, 'epoch': 4.0}
+{'loss': 0.166, 'learning_rate': 1.5419613392575965e-06, 'epoch': 4.31}
+{'loss': 0.1462, 'learning_rate': 4.785397259764955e-07, 'epoch': 4.78}
+{'eval_loss': 0.6890381574630737, 'eval_maf': 0.7200980392156863, 'eval_map': 0.8298611111111112, 'eval_mar': 0.6610085227272727, 'eval_mif': 0.82, 'eval_mip': 0.82, 'eval_mir': 0.82, 'eval_avgf': 0.8104509803921569, 'eval_avgp': 0.8161111111111111, 'eval_avgr': 0.82, 'eval_mse': 0.72, 'eval_runtime': 1.0806, 'eval_samples_per_second': 92.544, 'eval_steps_per_second': 6.478, 'learning_rate': 0.0, 'epoch': 5.0}
+{'train_runtime': 3018.9714, 'train_samples_per_second': 27.675, 'train_steps_per_second': 1.731, 'train_loss': 0.246350646680622, 'learning_rate': 0.0, 'epoch': 5.0}
+{'eval_loss': 0.5507552623748779, 'eval_maf': 0.6331724581724582, 'eval_map': 0.8214912280701755, 'eval_mar': 0.57578125, 'eval_mif': 0.79, 'eval_mip': 0.79, 'eval_mir': 0.79, 'eval_avgf': 0.7711917631917632, 'eval_avgp': 0.7900175438596492, 'eval_avgr': 0.79, 'eval_mse': 0.81, 'eval_runtime': 1.0924, 'eval_samples_per_second': 91.54, 'eval_steps_per_second': 6.408, 'learning_rate': 0.0, 'epoch': 5.0}
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+ 33%|â–ˆâ–ˆâ–ˆâ–Ž      | 1/3 [00:00<00:00,  4.49it/s]
+100%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 3/3 [00:00<00:00, 10.22it/s]
+Didn't find file ./tokenizer6/added_tokens.json. We won't load it.
+loading file ./tokenizer6/sentencepiece.bpe.model
+loading file ./tokenizer6/tokenizer.json
+loading file None
+loading file ./tokenizer6/special_tokens_map.json
+loading file ./tokenizer6/tokenizer_config.json
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 32
+  Total train batch size (w. parallel, distributed & accumulation) = 32
+  Gradient Accumulation steps = 1
+  Total optimization steps = 2615
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/1/checkpoint-523
+Configuration saved in ./testRobertaCardiff/1/checkpoint-523/config.json
+Model weights saved in ./testRobertaCardiff/1/checkpoint-523/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/1/checkpoint-523/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/1/checkpoint-523/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/1/checkpoint-1046
+Configuration saved in ./testRobertaCardiff/1/checkpoint-1046/config.json
+Model weights saved in ./testRobertaCardiff/1/checkpoint-1046/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/1/checkpoint-1046/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/1/checkpoint-1046/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/1/checkpoint-1569
+Configuration saved in ./testRobertaCardiff/1/checkpoint-1569/config.json
+Model weights saved in ./testRobertaCardiff/1/checkpoint-1569/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/1/checkpoint-1569/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/1/checkpoint-1569/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/1/checkpoint-2092
+Configuration saved in ./testRobertaCardiff/1/checkpoint-2092/config.json
+Model weights saved in ./testRobertaCardiff/1/checkpoint-2092/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/1/checkpoint-2092/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/1/checkpoint-2092/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/1/checkpoint-2615
+Configuration saved in ./testRobertaCardiff/1/checkpoint-2615/config.json
+Model weights saved in ./testRobertaCardiff/1/checkpoint-2615/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/1/checkpoint-2615/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/1/checkpoint-2615/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testRobertaCardiff/1/checkpoint-1569 (score: 0.836947500705719).
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 32
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[32m[I 2022-07-20 11:00:08,052][0m Trial 1 finished with value: 0.39698967140445746 and parameters: {'learning_rate': 2.3941246808671858e-05, 'weight_decay': 0.0014748663244170785, 'per_device_train_batch_size': 32}. Best is trial 0 with value: 0.246350646680622.[0m
+loading configuration file ./model6/config.json
+Model config XLMRobertaConfig {
+  "_name_or_path": "./model6/",
+  "architectures": [
+    "XLMRobertaForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+loading weights file ./model6/pytorch_model.bin
+All model checkpoint weights were used when initializing XLMRobertaForSequenceClassification.
+
+All the weights of XLMRobertaForSequenceClassification were initialized from the model checkpoint at ./model6/.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use XLMRobertaForSequenceClassification for predictions without further training.
+Using custom data configuration default-a1a1013d5c9373f1
+Reusing dataset csv (/mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+{'loss': 0.5623, 'learning_rate': 1.9363570554623703e-05, 'epoch': 0.96}
+{'eval_loss': 0.8584668040275574, 'eval_maf': 0.4639360442163442, 'eval_map': 0.5261029411764706, 'eval_mar': 0.45127840909090905, 'eval_mif': 0.72, 'eval_mip': 0.72, 'eval_mir': 0.72, 'eval_avgf': 0.6589703908409001, 'eval_avgp': 0.6493235294117647, 'eval_avgr': 0.72, 'eval_mse': 0.99, 'eval_runtime': 1.0881, 'eval_samples_per_second': 91.907, 'eval_steps_per_second': 3.676, 'learning_rate': 1.9152997446937486e-05, 'epoch': 1.0}
+{'loss': 0.4617, 'learning_rate': 1.4785894300575544e-05, 'epoch': 1.91}
+{'eval_loss': 0.8747215270996094, 'eval_maf': 0.4224802236770322, 'eval_map': 0.46692768016297426, 'eval_mar': 0.4044744318181818, 'eval_mif': 0.67, 'eval_mip': 0.67, 'eval_mir': 0.67, 'eval_avgf': 0.6363570649208947, 'eval_avgp': 0.6218054494525083, 'eval_avgr': 0.67, 'eval_mse': 1.34, 'eval_runtime': 1.0744, 'eval_samples_per_second': 93.078, 'eval_steps_per_second': 3.723, 'learning_rate': 1.4364748085203115e-05, 'epoch': 2.0}
+{'loss': 0.3831, 'learning_rate': 1.0208218046527389e-05, 'epoch': 2.87}
+{'eval_loss': 0.836947500705719, 'eval_maf': 0.4905034802274773, 'eval_map': 0.5320616883116883, 'eval_mar': 0.46974431818181817, 'eval_mif': 0.7100000000000001, 'eval_mip': 0.71, 'eval_mir': 0.71, 'eval_avgf': 0.6783514480820324, 'eval_avgp': 0.6645779220779221, 'eval_avgr': 0.71, 'eval_mse': 1.11, 'eval_runtime': 1.0748, 'eval_samples_per_second': 93.038, 'eval_steps_per_second': 3.722, 'learning_rate': 9.576498723468743e-06, 'epoch': 3.0}
+{'loss': 0.328, 'learning_rate': 5.630541792479232e-06, 'epoch': 3.82}
+{'eval_loss': 0.9935379028320312, 'eval_maf': 0.44583333333333336, 'eval_map': 0.46249999999999997, 'eval_mar': 0.45482954545454546, 'eval_mif': 0.7100000000000001, 'eval_mip': 0.71, 'eval_mir': 0.71, 'eval_avgf': 0.6583333333333334, 'eval_avgp': 0.638, 'eval_avgr': 0.71, 'eval_mse': 1.16, 'eval_runtime': 1.0764, 'eval_samples_per_second': 92.898, 'eval_steps_per_second': 3.716, 'learning_rate': 4.788249361734372e-06, 'epoch': 4.0}
+{'loss': 0.2801, 'learning_rate': 1.0528655384310759e-06, 'epoch': 4.78}
+{'eval_loss': 0.9547102451324463, 'eval_maf': 0.5055000102230673, 'eval_map': 0.5417808219178082, 'eval_mar': 0.48465909090909093, 'eval_mif': 0.7100000000000001, 'eval_mip': 0.71, 'eval_mir': 0.71, 'eval_avgf': 0.6893741438181112, 'eval_avgp': 0.678958904109589, 'eval_avgr': 0.71, 'eval_mse': 1.11, 'eval_runtime': 1.1001, 'eval_samples_per_second': 90.897, 'eval_steps_per_second': 3.636, 'learning_rate': 0.0, 'epoch': 5.0}
+{'train_runtime': 2858.4888, 'train_samples_per_second': 29.229, 'train_steps_per_second': 0.915, 'train_loss': 0.39698967140445746, 'learning_rate': 0.0, 'epoch': 5.0}
+{'eval_loss': 0.836947500705719, 'eval_maf': 0.4905034802274773, 'eval_map': 0.5320616883116883, 'eval_mar': 0.46974431818181817, 'eval_mif': 0.7100000000000001, 'eval_mip': 0.71, 'eval_mir': 0.71, 'eval_avgf': 0.6783514480820324, 'eval_avgp': 0.6645779220779221, 'eval_avgr': 0.71, 'eval_mse': 1.11, 'eval_runtime': 1.0843, 'eval_samples_per_second': 92.225, 'eval_steps_per_second': 3.689, 'learning_rate': 0.0, 'epoch': 5.0}
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 3/3 [00:00<00:00, 28.21it/s]
+100%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 3/3 [00:00<00:00, 28.08it/s]
+Didn't find file ./tokenizer6/added_tokens.json. We won't load it.
+loading file ./tokenizer6/sentencepiece.bpe.model
+loading file ./tokenizer6/tokenizer.json
+loading file None
+loading file ./tokenizer6/special_tokens_map.json
+loading file ./tokenizer6/tokenizer_config.json
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/2/checkpoint-2089
+Configuration saved in ./testRobertaCardiff/2/checkpoint-2089/config.json
+Model weights saved in ./testRobertaCardiff/2/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/2/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/2/checkpoint-2089/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/2/checkpoint-4178
+Configuration saved in ./testRobertaCardiff/2/checkpoint-4178/config.json
+Model weights saved in ./testRobertaCardiff/2/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/2/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/2/checkpoint-4178/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/2/checkpoint-6267
+Configuration saved in ./testRobertaCardiff/2/checkpoint-6267/config.json
+Model weights saved in ./testRobertaCardiff/2/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/2/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/2/checkpoint-6267/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/2/checkpoint-8356
+Configuration saved in ./testRobertaCardiff/2/checkpoint-8356/config.json
+Model weights saved in ./testRobertaCardiff/2/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/2/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/2/checkpoint-8356/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testRobertaCardiff/2/checkpoint-2089 (score: 1.1071066856384277).
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[32m[I 2022-07-20 11:44:56,451][0m Trial 2 finished with value: 0.5991640762029623 and parameters: {'learning_rate': 7.406773443570391e-07, 'weight_decay': 0.00027518779526434774, 'per_device_train_batch_size': 8}. Best is trial 0 with value: 0.246350646680622.[0m
+loading configuration file ./model6/config.json
+Model config XLMRobertaConfig {
+  "_name_or_path": "./model6/",
+  "architectures": [
+    "XLMRobertaForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1",
+    "2": "LABEL_2",
+    "3": "LABEL_3"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1,
+    "LABEL_2": 2,
+    "LABEL_3": 3
+  },
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 1,
+  "position_embedding_type": "absolute",
+  "torch_dtype": "float32",
+  "transformers_version": "4.20.1",
+  "type_vocab_size": 1,
+  "use_cache": true,
+  "vocab_size": 250002
+}
+
+loading weights file ./model6/pytorch_model.bin
+All model checkpoint weights were used when initializing XLMRobertaForSequenceClassification.
+
+All the weights of XLMRobertaForSequenceClassification were initialized from the model checkpoint at ./model6/.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use XLMRobertaForSequenceClassification for predictions without further training.
+Using custom data configuration default-a1a1013d5c9373f1
+Reusing dataset csv (/mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58)
+{'loss': 0.7375, 'learning_rate': 7.052212723437773e-07, 'epoch': 0.24}
+{'loss': 0.6363, 'learning_rate': 6.697652003305155e-07, 'epoch': 0.48}
+{'loss': 0.6162, 'learning_rate': 6.343091283172537e-07, 'epoch': 0.72}
+{'loss': 0.589, 'learning_rate': 5.988530563039918e-07, 'epoch': 0.96}
+{'eval_loss': 1.1071066856384277, 'eval_maf': 0.23525641025641025, 'eval_map': 0.23369565217391305, 'eval_mar': 0.2688210227272727, 'eval_mif': 0.65, 'eval_mip': 0.65, 'eval_mir': 0.65, 'eval_avgf': 0.5462564102564103, 'eval_avgp': 0.4932608695652174, 'eval_avgr': 0.65, 'eval_mse': 1.22, 'eval_runtime': 1.1481, 'eval_samples_per_second': 87.1, 'eval_steps_per_second': 11.323, 'learning_rate': 5.925418754856313e-07, 'epoch': 1.0}
+{'loss': 0.6118, 'learning_rate': 5.633969842907301e-07, 'epoch': 1.2}
+{'loss': 0.6042, 'learning_rate': 5.279409122774683e-07, 'epoch': 1.44}
+{'loss': 0.5848, 'learning_rate': 4.924848402642065e-07, 'epoch': 1.68}
+{'loss': 0.5974, 'learning_rate': 4.5702876825094467e-07, 'epoch': 1.91}
+{'eval_loss': 1.1324464082717896, 'eval_maf': 0.23548387096774193, 'eval_map': 0.22863247863247863, 'eval_mar': 0.2688210227272727, 'eval_mif': 0.65, 'eval_mip': 0.65, 'eval_mir': 0.65, 'eval_avgf': 0.5486451612903225, 'eval_avgp': 0.4919658119658119, 'eval_avgr': 0.65, 'eval_mse': 1.3, 'eval_runtime': 1.1508, 'eval_samples_per_second': 86.896, 'eval_steps_per_second': 11.297, 'learning_rate': 4.444064066142235e-07, 'epoch': 2.0}
+{'loss': 0.5884, 'learning_rate': 4.2157269623768287e-07, 'epoch': 2.15}
+{'loss': 0.5837, 'learning_rate': 3.8611662422442106e-07, 'epoch': 2.39}
+{'loss': 0.5865, 'learning_rate': 3.5066055221115926e-07, 'epoch': 2.63}
+{'loss': 0.5827, 'learning_rate': 3.1520448019789746e-07, 'epoch': 2.87}
+{'eval_loss': 1.1246274709701538, 'eval_maf': 0.25142045454545453, 'eval_map': 0.25, 'eval_mar': 0.28018465909090906, 'eval_mif': 0.66, 'eval_mip': 0.66, 'eval_mir': 0.66, 'eval_avgf': 0.5648863636363636, 'eval_avgp': 0.514, 'eval_avgr': 0.66, 'eval_mse': 1.26, 'eval_runtime': 1.1471, 'eval_samples_per_second': 87.175, 'eval_steps_per_second': 11.333, 'learning_rate': 2.9627093774281566e-07, 'epoch': 3.0}
+{'loss': 0.5653, 'learning_rate': 2.7974840818463566e-07, 'epoch': 3.11}
+{'loss': 0.5779, 'learning_rate': 2.4429233617137385e-07, 'epoch': 3.35}
+{'loss': 0.578, 'learning_rate': 2.0883626415811205e-07, 'epoch': 3.59}
+{'loss': 0.5673, 'learning_rate': 1.7338019214485025e-07, 'epoch': 3.83}
+{'eval_loss': 1.114345669746399, 'eval_maf': 0.23680351906158356, 'eval_map': 0.23055555555555554, 'eval_mar': 0.2688210227272727, 'eval_mif': 0.65, 'eval_mip': 0.65, 'eval_mir': 0.65, 'eval_avgf': 0.5520234604105572, 'eval_avgp': 0.4968888888888888, 'eval_avgr': 0.65, 'eval_mse': 1.35, 'eval_runtime': 1.1493, 'eval_samples_per_second': 87.013, 'eval_steps_per_second': 11.312, 'learning_rate': 1.4813546887140783e-07, 'epoch': 4.0}
+{'train_runtime': 2671.6278, 'train_samples_per_second': 31.273, 'train_steps_per_second': 3.91, 'train_loss': 0.5991640762029623, 'learning_rate': 1.4813546887140783e-07, 'epoch': 4.0}
+{'eval_loss': 1.1071066856384277, 'eval_maf': 0.23525641025641025, 'eval_map': 0.23369565217391305, 'eval_mar': 0.2688210227272727, 'eval_mif': 0.65, 'eval_mip': 0.65, 'eval_mir': 0.65, 'eval_avgf': 0.5462564102564103, 'eval_avgp': 0.4932608695652174, 'eval_avgr': 0.65, 'eval_mse': 1.22, 'eval_runtime': 1.1641, 'eval_samples_per_second': 85.904, 'eval_steps_per_second': 11.168, 'learning_rate': 1.4813546887140783e-07, 'epoch': 4.0}
+
+  0%|          | 0/3 [00:00<?, ?it/s]
+100%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 3/3 [00:00<00:00, 33.92it/s]
+Didn't find file ./tokenizer6/added_tokens.json. We won't load it.
+loading file ./tokenizer6/sentencepiece.bpe.model
+loading file ./tokenizer6/tokenizer.json
+loading file None
+loading file ./tokenizer6/special_tokens_map.json
+loading file ./tokenizer6/tokenizer_config.json
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-1c80317fa3b1799d.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-bdd640fb06671ad1.arrow
+Loading cached processed dataset at /mnt/beegfs/mevr0003/.cache/huggingface/datasets/csv/default-a1a1013d5c9373f1/0.0.0/51cce309a08df9c4d82ffd9363bbe090bf173197fc01a71b034e8594995a1a58/cache-3eb13b9046685257.arrow
+PyTorch: setting up devices
+The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+The following columns in the training set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 16710
+  Num Epochs = 5
+  Instantaneous batch size per device = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 10445
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/3/checkpoint-2089
+Configuration saved in ./testRobertaCardiff/3/checkpoint-2089/config.json
+Model weights saved in ./testRobertaCardiff/3/checkpoint-2089/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/3/checkpoint-2089/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/3/checkpoint-2089/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/3/checkpoint-4178
+Configuration saved in ./testRobertaCardiff/3/checkpoint-4178/config.json
+Model weights saved in ./testRobertaCardiff/3/checkpoint-4178/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/3/checkpoint-4178/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/3/checkpoint-4178/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/3/checkpoint-6267
+Configuration saved in ./testRobertaCardiff/3/checkpoint-6267/config.json
+Model weights saved in ./testRobertaCardiff/3/checkpoint-6267/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/3/checkpoint-6267/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/3/checkpoint-6267/special_tokens_map.json
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Saving model checkpoint to ./testRobertaCardiff/3/checkpoint-8356
+Configuration saved in ./testRobertaCardiff/3/checkpoint-8356/config.json
+Model weights saved in ./testRobertaCardiff/3/checkpoint-8356/pytorch_model.bin
+tokenizer config file saved in ./testRobertaCardiff/3/checkpoint-8356/tokenizer_config.json
+Special tokens file saved in ./testRobertaCardiff/3/checkpoint-8356/special_tokens_map.json
+
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+Loading best model from ./testRobertaCardiff/3/checkpoint-2089 (score: 0.9624881744384766).
+The following columns in the evaluation set don't have a corresponding argument in `XLMRobertaForSequenceClassification.forward` and have been ignored: comment, media, comment_id, influencer, influencer_gender. If comment, media, comment_id, influencer, influencer_gender are not expected by `XLMRobertaForSequenceClassification.forward`,  you can safely ignore this message.
+***** Running Evaluation *****
+  Num examples = 100
+  Batch size = 8
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/mnt/beegfs/mevr0003/.conda/envs/train/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1327: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[32m[I 2022-07-20 12:29:47,052][0m Trial 3 finished with value: 0.4869774142311429 and parameters: {'learning_rate': 7.816708194495668e-06, 'weight_decay': 0.0013661346538162502, 'per_device_train_batch_size': 8}. Best is trial 0 with value: 0.246350646680622.[0m
+{'loss': 0.6241, 'learning_rate': 7.442523982217273e-06, 'epoch': 0.24}
+{'loss': 0.6066, 'learning_rate': 7.068339769938878e-06, 'epoch': 0.48}
+{'loss': 0.5644, 'learning_rate': 6.694155557660483e-06, 'epoch': 0.72}
+{'loss': 0.5318, 'learning_rate': 6.3199713453820874e-06, 'epoch': 0.96}
+{'eval_loss': 0.9624881744384766, 'eval_maf': 0.46242389649923893, 'eval_map': 0.5016768292682927, 'eval_mar': 0.45482954545454546, 'eval_mif': 0.7100000000000001, 'eval_mip': 0.71, 'eval_mir': 0.71, 'eval_avgf': 0.6588051750380517, 'eval_avgp': 0.6437926829268292, 'eval_avgr': 0.71, 'eval_mse': 1.0, 'eval_runtime': 1.148, 'eval_samples_per_second': 87.108, 'eval_steps_per_second': 11.324, 'learning_rate': 6.253366555596534e-06, 'epoch': 1.0}
+{'loss': 0.5141, 'learning_rate': 5.9457871331036935e-06, 'epoch': 1.2}
+{'loss': 0.5194, 'learning_rate': 5.571602920825299e-06, 'epoch': 1.44}
+{'loss': 0.4859, 'learning_rate': 5.197418708546904e-06, 'epoch': 1.68}
+{'loss': 0.4752, 'learning_rate': 4.823234496268509e-06, 'epoch': 1.91}
+{'eval_loss': 1.146348476409912, 'eval_maf': 0.45044617672701165, 'eval_map': 0.5099206349206349, 'eval_mar': 0.43764204545454544, 'eval_mif': 0.72, 'eval_mip': 0.72, 'eval_mir': 0.72, 'eval_avgf': 0.663578645058721, 'eval_avgp': 0.6558730158730159, 'eval_avgr': 0.72, 'eval_mse': 1.09, 'eval_runtime': 1.1475, 'eval_samples_per_second': 87.148, 'eval_steps_per_second': 11.329, 'learning_rate': 4.6900249166974005e-06, 'epoch': 2.0}
+{'loss': 0.471, 'learning_rate': 4.449050283990114e-06, 'epoch': 2.15}
+{'loss': 0.4462, 'learning_rate': 4.0748660717117194e-06, 'epoch': 2.39}
+{'loss': 0.4567, 'learning_rate': 3.7006818594333246e-06, 'epoch': 2.63}
+{'loss': 0.4435, 'learning_rate': 3.32649764715493e-06, 'epoch': 2.87}
+{'eval_loss': 1.146267294883728, 'eval_maf': 0.5128947849536085, 'eval_map': 0.564873417721519, 'eval_mar': 0.4889204545454545, 'eval_mif': 0.74, 'eval_mip': 0.74, 'eval_mir': 0.74, 'eval_avgf': 0.7049714337949632, 'eval_avgp': 0.6960759493670886, 'eval_avgr': 0.74, 'eval_mse': 0.91, 'eval_runtime': 1.1483, 'eval_samples_per_second': 87.085, 'eval_steps_per_second': 11.321, 'learning_rate': 3.126683277798267e-06, 'epoch': 3.0}
+{'loss': 0.4231, 'learning_rate': 2.952313434876535e-06, 'epoch': 3.11}
+{'loss': 0.4432, 'learning_rate': 2.57812922259814e-06, 'epoch': 3.35}
+{'loss': 0.4239, 'learning_rate': 2.2039450103197454e-06, 'epoch': 3.59}
+{'loss': 0.4066, 'learning_rate': 1.8297607980413506e-06, 'epoch': 3.83}
+{'eval_loss': 1.1927576065063477, 'eval_maf': 0.458360186179735, 'eval_map': 0.5031793842034806, 'eval_mar': 0.45873579545454546, 'eval_mif': 0.72, 'eval_mip': 0.72, 'eval_mir': 0.72, 'eval_avgf': 0.6635073397780166, 'eval_avgp': 0.6581392235609103, 'eval_avgr': 0.72, 'eval_mse': 1.01, 'eval_runtime': 1.1517, 'eval_samples_per_second': 86.826, 'eval_steps_per_second': 11.287, 'learning_rate': 1.5633416388991335e-06, 'epoch': 4.0}
+{'train_runtime': 2673.374, 'train_samples_per_second': 31.253, 'train_steps_per_second': 3.907, 'train_loss': 0.4869774142311429, 'learning_rate': 1.5633416388991335e-06, 'epoch': 4.0}
+{'eval_loss': 0.9624881744384766, 'eval_maf': 0.46242389649923893, 'eval_map': 0.5016768292682927, 'eval_mar': 0.45482954545454546, 'eval_mif': 0.7100000000000001, 'eval_mip': 0.71, 'eval_mir': 0.71, 'eval_avgf': 0.6588051750380517, 'eval_avgp': 0.6437926829268292, 'eval_avgr': 0.71, 'eval_mse': 1.0, 'eval_runtime': 1.1565, 'eval_samples_per_second': 86.469, 'eval_steps_per_second': 11.241, 'learning_rate': 1.5633416388991335e-06, 'epoch': 4.0}
