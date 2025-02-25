@@ -16,7 +16,7 @@ María Estrella Vallecillo-Rodríguez^1^, Flor Miriam Plaza-del-Arco^2^ & Arturo
 ^2^ Bocconi University, Via Sarfatti, 25, Milan, 20100, Italy 
 flor.plaza@unibocconi.it
 
-### Abstract: 
+### Abstract
 The presence of offensive comments on social media has become a major issue in the use of the Internet. Natural Language Processing area has been studying methods and tools for the automatic detection of such content in social networks. The MeOffendEs task in the IberLEF evaluation campaign opened this problem to the research community for the Spanish language. This paper studies two methods for integrating certain contextual information with several transformer-based models. Our findings suggest that the contextual information provided by organizers does not contribute to a better prediction power. Instead, hyper-parameter search is a very important step in the general learning process, leading to systems outperforming the state-of-the-art in Spanish offensiveness detection.
 
 # Citing
